@@ -1,0 +1,27 @@
+./src/generafrommatlab.cpp: In member function ‘Malla* GeneraFromMatLab::generaMallaCuadrilateros()’:
+./src/generafrommatlab.cpp:266:36: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafrommatlab.cpp: In member function ‘Malla* GeneraFromMatLab::generaMallaTriangulos()’:
+./src/generafrommatlab.cpp:49:36: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromoff.cpp: In member function ‘virtual Malla* GeneraFromOFF::aplicar()’:
+./src/generafromoff.cpp:15:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromoff.cpp:17:22: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromoff.cpp:24:42: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromoff.cpp:42:36: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromoff.cpp:44:37: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp: In member function ‘virtual Malla* GeneraFromArchivosXYZU::aplicar()’:
+./src/generafromarchivosxyzu.cpp:25:39: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:26:39: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:27:39: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:28:39: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:34:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:35:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:36:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:37:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:66:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:67:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:68:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:69:45: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:117:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:118:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:119:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+./src/generafromarchivosxyzu.cpp:120:33: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]

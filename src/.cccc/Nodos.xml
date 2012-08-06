@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Nodos-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="196" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="53" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="37" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="5.297" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.432" level="0" />
+<weighted_methods_per_class_unity value="18" level="0" />
+<weighted_methods_per_class_visibility value="18" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="5" level="0" />
+<IF4 value="36" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="4" level="0" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="nodos.h" line="17" />
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Nodos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="3" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="24" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Nodos(vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="8" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="25" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addArcoNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="163" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="42" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addCaraNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="158" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="41" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addNodo(Nodo *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="14" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="26" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="6" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>eraseNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="31" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="27" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="41" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="28" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNumNodos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="148" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="39" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNumNodosValidos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="153" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="40" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>moverNodo(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="51" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="32" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.333" level="0" />
+</member_function>
+<member_function>
+<name>moverNodoSegunConcentracion(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="71" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="33" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.000" level="1" />
+</member_function>
+<member_function>
+<name>moverTodos(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="131" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="36" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>moverTodosSegunConcentracion(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="140" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="37" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>operator [](int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="46" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="29" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>popNodoVacio(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="173" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="43" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.250" level="0" />
+</member_function>
+<member_function>
+<name>regresarNodo(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="91" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="34" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="3.500" level="0" />
+</member_function>
+<member_function>
+<name>regresarNodoSegunConcentracion(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="111" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="35" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.000" level="1" />
+</member_function>
+<member_function>
+<name>~Nodos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="nodos.cpp" line="197" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="nodos.h" line="46" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Nodos</name>
+<client_module>
+<name>GeneraCilindro</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="generacilindro.h" line="13" />
+</extent>
+<name>GeneraFromMedula</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="generafrommedula.h" line="18" />
+</extent>
+<name>Malla</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="95" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="malla.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="37" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Nodo</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="nodos.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="nodos.h" line="26" />
+</extent>
+<name>vector</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="nodos.cpp" line="8" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="nodos.h" line="19" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="nodos.h" line="22" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="nodos.h" line="25" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

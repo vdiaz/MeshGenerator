@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Cara-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="166" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="35" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="24" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="6.917" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.458" level="0" />
+<weighted_methods_per_class_unity value="20" level="0" />
+<weighted_methods_per_class_visibility value="20" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="2" level="0" />
+<IF4 value="1" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="1" level="0" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="cara.h" line="14" />
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Cara(int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="16" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="22" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Cara(int,int,int,int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="3" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="21" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Cara(vector,vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="26" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="23" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="85" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="31" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>addNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="40" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="25" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>changeArco(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="68" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="28" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>changeNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="59" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="27" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>eraseArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="94" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="32" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>eraseNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="49" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="26" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArcos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="105" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="33" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getB()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="158" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="40" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getG()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="154" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="39" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="77" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="29" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNumElem()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="140" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="36" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPuntoDistinto(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="109" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="34" />
+</extent>
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="7.000" level="1" />
+</member_function>
+<member_function>
+<name>getPuntosDistintos(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="122" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="35" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getR()</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="150" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="38" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setArcos(vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="81" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="30" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setColores(float,float,float)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="144" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="37" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setNodos(vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="cara.cpp" line="36" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="cara.h" line="24" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Cara</name>
+<client_module>
+<name>Caras</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.cpp" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.cpp" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="caras.h" line="23" />
+</extent>
+</client_module>
+<supplier_module>
+<name>vector</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.cpp" line="26" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.cpp" line="36" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.cpp" line="81" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="cara.h" line="16" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="cara.h" line="17" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.h" line="23" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.h" line="23" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.h" line="24" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="cara.h" line="30" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

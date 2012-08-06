@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MeshGenerator" />
+		<Option makefile="makefile" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="$make $makefile all" />
+			<CompileFile command="$make -f $makefile $file" />
+			<Clean command="$make clean" />
+			<DistClean command="$make -f $makefile distclean$target" />
+			<AskRebuildNeeded command="$make -q -f $makefile $target" />
+			<SilentBuild command="$make -s -f $makefile $target" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TGSMinimal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -s -f $makefile $target" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TGSMinimal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -s -f $makefile $target" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config gtk+-2.0 --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config gtk+-2.0 --libs`" />
+		</Linker>
+		<Unit filename="TGSMinimal.cbp" />
+		<Unit filename="TGSMinimal.layout" />
+		<Unit filename="makefile" />
+		<Unit filename="src/GUIDialogAbrirMatlab.cc" />
+		<Unit filename="src/GUIDialogAbrirMatlab.hh" />
+		<Unit filename="src/GUIDialogAbrirMatlab_glade.cc" />
+		<Unit filename="src/GUIDialogAbrirMatlab_glade.hh" />
+		<Unit filename="src/GUIDialogCambios.cc" />
+		<Unit filename="src/GUIDialogCambios.hh" />
+		<Unit filename="src/GUIDialogCambios_glade.cc" />
+		<Unit filename="src/GUIDialogCambios_glade.hh" />
+		<Unit filename="src/GUIDialogDesrefinar.cc" />
+		<Unit filename="src/GUIDialogDesrefinar.hh" />
+		<Unit filename="src/GUIDialogDesrefinar_glade.cc" />
+		<Unit filename="src/GUIDialogDesrefinar_glade.hh" />
+		<Unit filename="src/GUIDialogDistribuirHormona.cc" />
+		<Unit filename="src/GUIDialogDistribuirHormona.hh" />
+		<Unit filename="src/GUIDialogDistribuirHormona_glade.cc" />
+		<Unit filename="src/GUIDialogDistribuirHormona_glade.hh" />
+		<Unit filename="src/GUIDialogInformacion.cc" />
+		<Unit filename="src/GUIDialogInformacion.hh" />
+		<Unit filename="src/GUIDialogInformacion_glade.cc" />
+		<Unit filename="src/GUIDialogInformacion_glade.hh" />
+		<Unit filename="src/GUIDialogNuevaMalla.cc" />
+		<Unit filename="src/GUIDialogNuevaMalla.hh" />
+		<Unit filename="src/GUIDialogNuevaMalla_glade.cc" />
+		<Unit filename="src/GUIDialogNuevaMalla_glade.hh" />
+		<Unit filename="src/GUIDialogRefinar.cc" />
+		<Unit filename="src/GUIDialogRefinar.hh" />
+		<Unit filename="src/GUIDialogRefinar_glade.cc" />
+		<Unit filename="src/GUIDialogRefinar_glade.hh" />
+		<Unit filename="src/GUIMeshingToolGenerator_glade.hh" />
+		<Unit filename="src/GUIVentanaPrincipal.cc" />
+		<Unit filename="src/GUIVentanaPrincipal.hh" />
+		<Unit filename="src/GUIVentanaPrincipal_glade.cc" />
+		<Unit filename="src/GUIVentanaPrincipal_glade.hh" />
+		<Unit filename="src/Makefile.am" />
+		<Unit filename="src/Makefile.am_new" />
+		<Unit filename="src/SimpleGLScene.cc" />
+		<Unit filename="src/SimpleGLScene.hh" />
+		<Unit filename="src/algalmacenamiento.h" />
+		<Unit filename="src/algdesplazamiento.h" />
+		<Unit filename="src/algdesrefinamiento.h" />
+		<Unit filename="src/alggeneracion.h" />
+		<Unit filename="src/algmejoramiento.h" />
+		<Unit filename="src/algrefinamiento.h" />
+		<Unit filename="src/almacenatocomsol_1.cpp" />
+		<Unit filename="src/almacenatocomsol_1.h" />
+		<Unit filename="src/almacenatooff.cpp" />
+		<Unit filename="src/almacenatooff.h" />
+		<Unit filename="src/almacenatoxyzu.cpp" />
+		<Unit filename="src/almacenatoxyzu.h" />
+		<Unit filename="src/angulominimo.cpp" />
+		<Unit filename="src/angulominimo.h" />
+		<Unit filename="src/arco.cpp" />
+		<Unit filename="src/arco.h" />
+		<Unit filename="src/arcos.cpp" />
+		<Unit filename="src/arcos.h" />
+		<Unit filename="src/areacara.cpp" />
+		<Unit filename="src/areacara.h" />
+		<Unit filename="src/cara.cpp" />
+		<Unit filename="src/cara.h" />
+		<Unit filename="src/caras.cpp" />
+		<Unit filename="src/caras.h" />
+		<Unit filename="src/comando.cpp" />
+		<Unit filename="src/comando.h" />
+		<Unit filename="src/config.h" />
+		<Unit filename="src/configreader.cpp" />
+		<Unit filename="src/configreader.h" />
+		<Unit filename="src/criterio.h" />
+		<Unit filename="src/definiciones.h" />
+		<Unit filename="src/deformar.cpp" />
+		<Unit filename="src/deformar.h" />
+		<Unit filename="src/delaunaylongestedgebisection.cpp" />
+		<Unit filename="src/delaunaylongestedgebisection.h" />
+		<Unit filename="src/desrefinamientoedgecollapse.cpp" />
+		<Unit filename="src/desrefinamientoedgecollapse.h" />
+		<Unit filename="src/desrefinar.cpp" />
+		<Unit filename="src/desrefinar.h" />
+		<Unit filename="src/distribuirhormona.cpp" />
+		<Unit filename="src/distribuirhormona.h" />
+		<Unit filename="src/generacilindro.cpp" />
+		<Unit filename="src/generacilindro.h" />
+		<Unit filename="src/generafromarchivosxyzu.cpp" />
+		<Unit filename="src/generafromarchivosxyzu.h" />
+		<Unit filename="src/generafromcomsol_1.cpp" />
+		<Unit filename="src/generafromcomsol_1.h" />
+		<Unit filename="src/generafrommatlab.cpp" />
+		<Unit filename="src/generafrommatlab.h" />
+		<Unit filename="src/generafrommedula.cpp" />
+		<Unit filename="src/generafrommedula.h" />
+		<Unit filename="src/generafromoff.cpp" />
+		<Unit filename="src/generafromoff.h" />
+		<Unit filename="src/generar.cpp" />
+		<Unit filename="src/generar.h" />
+		<Unit filename="src/guardar.cpp" />
+		<Unit filename="src/guardar.h" />
+		<Unit filename="src/informacionmalla.cpp" />
+		<Unit filename="src/informacionmalla.h" />
+		<Unit filename="src/informar.cpp" />
+		<Unit filename="src/informar.h" />
+		<Unit filename="src/largoarcomaximo.cpp" />
+		<Unit filename="src/largoarcomaximo.h" />
+		<Unit filename="src/largoarcominimo.cpp" />
+		<Unit filename="src/largoarcominimo.h" />
+		<Unit filename="src/lepp.cpp" />
+		<Unit filename="src/lepp.h" />
+		<Unit filename="src/leppdelaunay.cpp" />
+		<Unit filename="src/leppdelaunay.h" />
+		<Unit filename="src/malla.cpp" />
+		<Unit filename="src/malla.h" />
+		<Unit filename="src/mejdelaunay.cpp" />
+		<Unit filename="src/mejdelaunay.h" />
+		<Unit filename="src/mejorar.cpp" />
+		<Unit filename="src/mejorar.h" />
+		<Unit filename="src/nodo.cpp" />
+		<Unit filename="src/nodo.h" />
+		<Unit filename="src/nodos.cpp" />
+		<Unit filename="src/nodos.h" />
+		<Unit filename="src/noverificacion.cpp" />
+		<Unit filename="src/noverificacion.h" />
+		<Unit filename="src/polinomio.cpp" />
+		<Unit filename="src/polinomio.h" />
+		<Unit filename="src/punto.cpp" />
+		<Unit filename="src/punto.h" />
+		<Unit filename="src/refinar.cpp" />
+		<Unit filename="src/refinar.h" />
+		<Unit filename="src/segmenttriangleintersection.cpp" />
+		<Unit filename="src/segmenttriangleintersection.h" />
+		<Unit filename="src/segtriint.cpp" />
+		<Unit filename="src/segtriint.h" />
+		<Unit filename="src/treegrowthsimulator.cc" />
+		<Unit filename="src/vect.cpp" />
+		<Unit filename="src/vect.h" />
+		<Unit filename="src/verificacionlocal.cpp" />
+		<Unit filename="src/verificacionlocal.h" />
+		<Unit filename="src/verificacionnodosvecinos.cpp" />
+		<Unit filename="src/verificacionnodosvecinos.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

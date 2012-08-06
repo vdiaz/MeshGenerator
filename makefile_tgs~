@@ -1,0 +1,13 @@
+EXEC = treegrowthsimulator_minimal
+CC = g++
+LFLAGS = -O2 -lgsl -lgslcblas
+PKG_CONFIG = `pkg-config gtkglextmm-1.2 libglademm-2.4 --cflags --libs sigc++-2.0`
+
+SOURCES = ./src/*.cpp ./src/*.cc
+OUTPUT = salida_tgs
+
+default:
+	$(CC) $(SOURCES) $(LFLAGS) $(PKG_CONFIG) -o $(EXEC) 2> $(OUTPUT)
+
+clean:
+	rm -rf $(OBJ)

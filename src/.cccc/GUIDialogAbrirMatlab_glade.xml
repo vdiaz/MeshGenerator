@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module GUIDialogAbrirMatlab_glade-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="107" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="0" />
+<lines_of_code value="8" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="13.375" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="1" level="0" />
+<coupling_between_objects value="8" level="0" />
+<IF4 value="49" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="49" level="1" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="1" level="0" />
+<IF4_concrete_per_member_function value="********" level="2" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="45" />
+<lines_of_code value="15" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>GUIDialogAbrirMatlab_glade()</name>
+<extent>
+<description>definition</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.cc" line="27" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="61" />
+</extent>
+<lines_of_code value="88" level="1" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="11.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>~GUIDialogAbrirMatlab_glade()</name>
+<extent>
+<description>definition</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.cc" line="118" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="63" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>GUIDialogAbrirMatlab_glade</name>
+<client_module>
+<name>GUIDialogAbrirMatlab</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="GUIDialogAbrirMatlab.hh" line="19" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Button</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="51" />
+</extent>
+<name>Combo</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="57" />
+</extent>
+<name>Dialog</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="45" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="50" />
+</extent>
+<name>GlademmData</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="48" />
+</extent>
+<name>Label</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="54" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="55" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="56" />
+</extent>
+<name>SpinButton</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="52" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="53" />
+</extent>
+<name>Table</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIDialogAbrirMatlab_glade.hh" line="58" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

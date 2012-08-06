@@ -1,0 +1,5 @@
+#include "comandoMTG.h"
+
+ComandoMTG::ComandoMTG(std::map<std::string, bool> formatos) {
+	formatos_malla = formatos;
+}

@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Malla-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="1703" level="1" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="423" level="1" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="310" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="5.494" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.365" level="0" />
+<weighted_methods_per_class_unity value="70" level="0" />
+<weighted_methods_per_class_visibility value="70" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="40" level="0" />
+<IF4 value="53361" level="2" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="36864" level="2" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="malla.h" line="18" />
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="14" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>Malla(Nodos *,Arcos *,Caras *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="95" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="37" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Malla(Punto *,Punto *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="4" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="34" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Malla(Punto *,Punto *,Punto *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="14" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="35" />
+</extent>
+<lines_of_code value="25" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="5.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Malla(Punto *,Punto *,Punto *,Punto *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="49" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="36" />
+</extent>
+<lines_of_code value="36" level="1" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="7.200" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>checkArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="929" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="103" />
+</extent>
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="13" level="1" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="******" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>checkCara(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="952" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="102" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>checkMalla()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="882" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="101" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="13" level="1" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="5.750" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="3.250" level="0" />
+</member_function>
+<member_function>
+<name>checkNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="911" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="104" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>clearNodosDestacados()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="154" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="52" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>edgeCollapse(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1161" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="85" />
+</extent>
+<lines_of_code value="156" level="2" />
+<McCabes_cyclomatic_complexity value="52" level="2" />
+<lines_of_comment value="40" level="0" />
+<lines_of_code_per_line_of_comment value="3.900" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.300" level="0" />
+</member_function>
+<member_function>
+<name>edgeCollapse2(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1130" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="87" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="8.667" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>edgeFlip(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="533" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="83" />
+</extent>
+<lines_of_code value="77" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="23" level="0" />
+<lines_of_code_per_line_of_comment value="3.348" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.391" level="0" />
+</member_function>
+<member_function>
+<name>edgeSplit(int,double,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="648" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="84" />
+</extent>
+<lines_of_code value="177" level="2" />
+<McCabes_cyclomatic_complexity value="15" level="1" />
+<lines_of_comment value="27" level="0" />
+<lines_of_code_per_line_of_comment value="6.556" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.556" level="0" />
+</member_function>
+<member_function>
+<name>esAnguloDiedro(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="212" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="61" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>esArcoBorde(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="200" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="60" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</member_function>
+<member_function>
+<name>esArcoConcavo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="225" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="62" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.000" level="0" />
+</member_function>
+<member_function>
+<name>esArcoFijo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="252" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="63" />
+</extent>
+<lines_of_code value="14" level="0" />
+<McCabes_cyclomatic_complexity value="8" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="8.000" level="1" />
+</member_function>
+<member_function>
+<name>esCaraBorde(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="509" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="79" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="0" />
+</member_function>
+<member_function>
+<name>esNodoBorde(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1121" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="64" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAnguloArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="188" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="59" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAnguloCaras(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="458" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="75" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getAnguloMax(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="358" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="71" />
+</extent>
+<lines_of_code value="29" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="14.500" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.500" level="0" />
+</member_function>
+<member_function>
+<name>getAnguloMin(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="327" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="70" />
+</extent>
+<lines_of_code value="29" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="14.500" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.500" level="0" />
+</member_function>
+<member_function>
+<name>getAnguloVertice(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="296" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="69" />
+</extent>
+<lines_of_code value="24" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="3.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.625" level="0" />
+</member_function>
+<member_function>
+<name>getArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="138" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="48" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArcoMasCorto(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="478" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="77" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArcoMasLargo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="466" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="76" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArcoOpuestoNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1396" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="91" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
+</member_function>
+<member_function>
+<name>getArcos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="126" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="45" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArcosAnguloMin(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="388" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="72" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.667" level="0" />
+</member_function>
+<member_function>
+<name>getArcosBordeCara(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="520" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="80" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getArea(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="267" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="67" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getCara(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="142" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="49" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getCaraOpuestaNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1444" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="94" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
+</member_function>
+<member_function>
+<name>getCaras()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="130" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="46" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getConcentracionMax()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="114" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="41" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getConcentracionMin()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="118" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="43" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getLargoArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="167" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="57" />
+</extent>
+<lines_of_code value="14" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getMedula()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="162" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="54" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodo(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="134" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="47" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodoAnguloMin(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="411" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="73" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodoOpuestoArco(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1424" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="93" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="9.000" level="1" />
+</member_function>
+<member_function>
+<name>getNodoOpuestoNodo(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1415" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="92" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="122" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="44" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNodosDestacados()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="150" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="51" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNormal(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="428" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="74" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="11" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getNormalNodos(int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1518" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="100" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPerimetro(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="287" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="68" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getPuntoMedioArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="181" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="58" />
+</extent>
+<lines_of_code value="7" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getSiguienteCara(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1378" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="90" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.333" level="0" />
+</member_function>
+<member_function>
+<name>getTipoMovRegion(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1685" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="108" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="4.600" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.000" level="0" />
+</member_function>
+<member_function>
+<name>getValoresVolumenCero(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1537" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="107" />
+</extent>
+<lines_of_code value="121" level="2" />
+<McCabes_cyclomatic_complexity value="19" level="1" />
+<lines_of_comment value="9" level="0" />
+<lines_of_code_per_line_of_comment value="13.444" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.111" level="0" />
+</member_function>
+<member_function>
+<name>isDelaunay(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="2060" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="117" />
+</extent>
+<lines_of_code value="57" level="1" />
+<McCabes_cyclomatic_complexity value="10" level="0" />
+<lines_of_comment value="15" level="0" />
+<lines_of_code_per_line_of_comment value="3.800" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.667" level="0" />
+</member_function>
+<member_function>
+<name>makeDelaunay(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="2143" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="118" />
+</extent>
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="7.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="3.000" level="0" />
+</member_function>
+<member_function>
+<name>manejaInconsistenciaArcoAntes(int,double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="2003" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="113" />
+</extent>
+<lines_of_code value="22" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="5.500" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>manejaInconsitenciaArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1863" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="112" />
+</extent>
+<lines_of_code value="112" level="2" />
+<McCabes_cyclomatic_complexity value="19" level="1" />
+<lines_of_comment value="12" level="0" />
+<lines_of_code_per_line_of_comment value="9.333" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.583" level="0" />
+</member_function>
+<member_function>
+<name>puntoInCara(Punto *,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1770" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="110" />
+</extent>
+<lines_of_code value="53" level="1" />
+<McCabes_cyclomatic_complexity value="29" level="1" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="10.600" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.800" level="1" />
+</member_function>
+<member_function>
+<name>seCruzan(Punto *,Punto *,Punto *,Punto *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1836" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="111" />
+</extent>
+<lines_of_code value="21" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="7.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setConcentracionMax(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="106" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="40" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setConcentracionMin(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="110" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="42" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setConcentracionTodos(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1510" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="99" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMedula(vector)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="158" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="53" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setNodoDestacado(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="146" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="50" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setNormal(int,Vect)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1502" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="98" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setNormales()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1485" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="97" />
+</extent>
+<lines_of_code value="14" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="27" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>sonCarasVecinas(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="490" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="78" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="10" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>tipArco(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="1718" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="109" />
+</extent>
+<lines_of_code value="36" level="1" />
+<McCabes_cyclomatic_complexity value="17" level="1" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="4.500" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.125" level="0" />
+</member_function>
+<member_function>
+<name>valorInterseccion(Punto *,Punto *,Punto *,Punto *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="2034" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="114" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>vertexDeletion(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="970" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="86" />
+</extent>
+<lines_of_code value="109" level="2" />
+<McCabes_cyclomatic_complexity value="33" level="2" />
+<lines_of_comment value="26" level="0" />
+<lines_of_code_per_line_of_comment value="4.192" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.269" level="0" />
+</member_function>
+<member_function>
+<name>~Malla()</name>
+<extent>
+<description>definition</description>
+<source_reference file="malla.cpp" line="2173" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="malla.h" line="121" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Malla</name>
+<client_module>
+<name>AlgAlmacenamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algalmacenamiento.h" line="13" />
+</extent>
+<name>AlgDesplazamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algdesplazamiento.h" line="12" />
+</extent>
+<name>AlgDesrefinamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algdesrefinamiento.h" line="13" />
+</extent>
+<name>AlgMejoramiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algmejoramiento.h" line="12" />
+</extent>
+<name>AlgRefinamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algrefinamiento.h" line="13" />
+</extent>
+<name>AlmacenaToComsol_1</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatocomsol_1.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatocomsol_1.h" line="12" />
+</extent>
+<name>AlmacenaToMllDebug</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatomlldebug.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatomlldebug.h" line="12" />
+</extent>
+<name>AlmacenaToOff</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatooff.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatooff.h" line="12" />
+</extent>
+<name>AlmacenaToXYZU</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatoxyzu.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="almacenatoxyzu.h" line="12" />
+</extent>
+<name>AnguloMinimo</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="angulominimo.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="angulominimo.h" line="15" />
+</extent>
+<name>AreaCara</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="areacara.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="areacara.h" line="14" />
+</extent>
+<name>Comando</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="comando.cpp" line="3" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="comando.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="comando.h" line="14" />
+</extent>
+<name>Criterio</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="criterio.h" line="11" />
+</extent>
+<name>Deformar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="deformar.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="deformar.h" line="14" />
+</extent>
+<name>DelaunayLongestEdgeBisection</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.h" line="14" />
+</extent>
+<name>DesrefinamientoEdgeCollapse</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.cpp" line="40" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.h" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.h" line="20" />
+</extent>
+<name>Desrefinar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinar.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinar.h" line="15" />
+</extent>
+<name>DistribuirHormona</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="distribuirhormona.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="distribuirhormona.h" line="10" />
+</extent>
+<name>GUIVentanaPrincipal</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIVentanaPrincipal.hh" line="18" />
+</extent>
+<name>Guardar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="guardar.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="guardar.h" line="15" />
+</extent>
+<name>InformacionMalla</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="informacionmalla.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="informacionmalla.h" line="16" />
+</extent>
+<name>Informar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="informar.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="informar.h" line="15" />
+</extent>
+<name>LargoArcoMaximo</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="largoarcomaximo.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="largoarcomaximo.h" line="15" />
+</extent>
+<name>LargoArcoMinimo</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="largoarcominimo.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="largoarcominimo.h" line="15" />
+</extent>
+<name>Lepp</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="lepp.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="lepp.h" line="14" />
+</extent>
+<name>LeppDelaunay</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="4" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="48" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="75" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="109" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="15" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="16" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="17" />
+</extent>
+<name>MejDelaunay</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="mejdelaunay.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="mejdelaunay.h" line="13" />
+</extent>
+<name>Mejorar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="mejorar.cpp" line="5" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="mejorar.h" line="14" />
+</extent>
+<name>NoVerificacion</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="noverificacion.cpp" line="8" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="noverificacion.h" line="15" />
+</extent>
+<name>Refinar</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="refinar.cpp" line="9" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="refinar.h" line="15" />
+</extent>
+<name>SimpleGLScene</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="318" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="429" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="38" />
+</extent>
+<name>VerificacionLocal</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.cpp" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.cpp" line="65" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.h" line="16" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.h" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionlocal.h" line="20" />
+</extent>
+<name>VerificacionNodosVecinos</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="65" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="71" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="144" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.cpp" line="177" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="13" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="17" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="18" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="19" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="verificacionnodosvecinos.h" line="21" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Arcos</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="95" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="malla.h" line="21" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="37" />
+</extent>
+<name>Caras</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="95" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="malla.h" line="22" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="37" />
+</extent>
+<name>Nodos</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="95" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="malla.h" line="20" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="37" />
+</extent>
+<name>Punto</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="4" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="4" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="49" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="1770" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="1836" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="1836" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="1836" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="1836" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="2034" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="2034" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="2034" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.cpp" line="2034" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="34" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="34" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="35" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="35" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="35" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="36" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="110" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="111" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="111" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="111" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="111" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="114" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="114" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="114" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="malla.h" line="114" />
+</extent>
+<name>Vect</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="malla.cpp" line="1502" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="malla.h" line="98" />
+</extent>
+<name>bool</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="malla.h" line="27" />
+</extent>
+<name>vector</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="malla.cpp" line="158" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="malla.h" line="23" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="malla.h" line="30" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="malla.h" line="53" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

@@ -1,0 +1,15 @@
+#ifndef GENERARTGS_H
+#define GENERARTGS_H
+
+#include "comandoMTG.h"
+
+class GenerarTGS : public ComandoMTG {
+
+	public:
+		GenerarTGS(std::map<std::string, bool> formatos_malla);
+		void execute();
+		~GenerarTGS();
+
+};
+
+#endif

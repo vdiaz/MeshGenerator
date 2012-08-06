@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module SimpleGLScene-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="355" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="59" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="64" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="5.547" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.922" level="0" />
+<weighted_methods_per_class_unity value="18" level="0" />
+<weighted_methods_per_class_visibility value="11" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="11" level="0" />
+<IF4 value="324" level="1" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="81" level="1" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="SimpleGLScene.hh" line="33" />
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="6" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>SimpleGLScene()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="119" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="36" />
+</extent>
+<lines_of_code value="36" level="1" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="3.600" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>clear()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="531" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="45" />
+</extent>
+<lines_of_code value="11" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>on_button_press_event(GdkEventButton *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="542" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="76" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>on_configure_event(GdkEventConfigure *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="227" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="74" />
+</extent>
+<lines_of_code value="10" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>on_expose_event(GdkEventExpose *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="251" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="72" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="13" level="0" />
+<lines_of_code_per_line_of_comment value="2.154" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.462" level="0" />
+</member_function>
+<member_function>
+<name>on_motion_notify_event(GdkEventMotion *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="548" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="75" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="6" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="******" level="2" />
+</member_function>
+<member_function>
+<name>on_realize()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="179" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="73" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="17" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>pauseAnimacion()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="507" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="40" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>redibujar()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="305" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="49" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMuestraArcos(bool)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="519" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="42" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMuestraCaras(bool)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="523" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="43" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setMuestraConcentracion(bool)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="527" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="44" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>startAnimacion(int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="497" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="39" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>stopAnimacion()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="501" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="41" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>updateAnimacion(int,Malla *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="429" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="38" />
+</extent>
+<lines_of_code value="60" level="1" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="30.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="6.000" level="1" />
+</member_function>
+<member_function>
+<name>updateFrame()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="511" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="50" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>updateMalla(Malla *,bool)</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="318" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="37" />
+</extent>
+<lines_of_code value="97" level="1" />
+<McCabes_cyclomatic_complexity value="20" level="1" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="48.500" level="2" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="10.000" level="1" />
+</member_function>
+<member_function>
+<name>~SimpleGLScene()</name>
+<extent>
+<description>definition</description>
+<source_reference file="SimpleGLScene.cc" line="175" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="SimpleGLScene.hh" line="46" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>SimpleGLScene</name>
+<client_module>
+<name>DistribuirHormona</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="distribuirhormona.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="distribuirhormona.h" line="11" />
+</extent>
+<extent>
+<description>has by reference</description>
+<source_reference file="distribuirhormona.h" line="20" />
+</extent>
+<name>GUIVentanaPrincipal</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="GUIVentanaPrincipal.hh" line="20" />
+</extent>
+</client_module>
+<supplier_module>
+<name>DrawingArea</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="SimpleGLScene.hh" line="33" />
+</extent>
+<name>GdkEventButton</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="542" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="76" />
+</extent>
+<name>GdkEventConfigure</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="227" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="74" />
+</extent>
+<name>GdkEventExpose</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="251" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="72" />
+</extent>
+<name>GdkEventMotion</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="548" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="75" />
+</extent>
+<name>Malla</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="318" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.cc" line="429" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="37" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="SimpleGLScene.hh" line="38" />
+</extent>
+<name>Widget</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="SimpleGLScene.hh" line="33" />
+</extent>
+<name>bool</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.cc" line="318" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.cc" line="519" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.cc" line="523" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.cc" line="527" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.hh" line="37" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.hh" line="42" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.hh" line="43" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="SimpleGLScene.hh" line="44" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="SimpleGLScene.hh" line="54" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="SimpleGLScene.hh" line="55" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="SimpleGLScene.hh" line="56" />
+</extent>
+<extent>
+<description>has by value</description>
+<source_reference file="SimpleGLScene.hh" line="57" />
+</extent>
+<name>connection</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="SimpleGLScene.hh" line="70" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

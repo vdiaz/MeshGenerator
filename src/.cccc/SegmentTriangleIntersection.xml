@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module SegmentTriangleIntersection-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="194" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="107" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="71" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="2.732" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.507" level="0" />
+<weighted_methods_per_class_unity value="12" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="3" level="0" />
+<IF4 value="4" level="0" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="4" level="0" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>AreaSign(tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="176" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.000" level="0" />
+</member_function>
+<member_function>
+<name>Dot(tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="85" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>InPlane(tPointi,int,tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="211" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>InTri2D(...)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="140" />
+</extent>
+<lines_of_code value="26" level="0" />
+<McCabes_cyclomatic_complexity value="38" level="2" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="13.000" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="19.000" level="2" />
+</member_function>
+<member_function>
+<name>InTri3D(tPointi,int,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="119" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="14" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>NormalVec(tPointd,tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="99" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>PlaneCoeff(tPointi,tPointd,double *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="48" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>SegPlaneInt(tPointi,tPointd,tPointd,tPointd,int *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="10" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="13" level="1" />
+<lines_of_comment value="14" level="0" />
+<lines_of_code_per_line_of_comment value="2.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.929" level="0" />
+</member_function>
+<member_function>
+<name>SegTriCross(tPointi,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="229" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="28" level="1" />
+<lines_of_comment value="16" level="0" />
+<lines_of_code_per_line_of_comment value="1.437" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.750" level="0" />
+</member_function>
+<member_function>
+<name>SegTriInt(tPointi,tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="189" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="5.500" level="1" />
+</member_function>
+<member_function>
+<name>SubVec(tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="74" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>VolumeSign(tPointd,tPointd,tPointd,tPointd)</name>
+<extent>
+<description>definition</description>
+<source_reference file="segmenttriangleintersection.cpp" line="266" />
+</extent>
+<lines_of_code value="28" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="7.000" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>SegmentTriangleIntersection</name>
+<client_module>
+<name>SegTriInt</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="segtriint.h" line="22" />
+</extent>
+</client_module>
+<supplier_module>
+<name>tPointd</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="48" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="74" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="74" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="74" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="85" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="85" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="99" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="99" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="99" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="99" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="119" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="176" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="176" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="176" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="189" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="189" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="189" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="211" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="211" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="211" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="229" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="229" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="266" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="266" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="266" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="266" />
+</extent>
+<name>tPointi</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="10" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="48" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="119" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="189" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="211" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="segmenttriangleintersection.cpp" line="229" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

@@ -1,0 +1,17 @@
+#include "generarTGS.h"
+#include <libconfig.h++>
+
+static const char *output_file = "config_tgs.cfg";
+
+GenerarTGS::GenerarTGS(std::map<std::string, bool> formatos_malla):ComandoMTG(formatos_malla) {
+
+}
+
+void GenerarTGS::execute() {
+
+
+}
+
+GenerarTGS::~GenerarTGS() {
+	delete &formatos_malla;
+}

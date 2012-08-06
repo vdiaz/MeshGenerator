@@ -1,0 +1,27 @@
+#include "generarConfig.h"
+#include <libconfig.h++>
+using namespace std;
+
+static const char *output_file = "config_tgs.cfg";
+
+GenerarConfig::GenerarConfig(std::map<std::string, bool> formatos_malla):ComandoMTG(formatos_malla) {
+
+}
+
+void GenerarConfig::execute() {
+
+	libconfig::Config cfg;
+	libconfig::Setting &root = cfg.getRoot();
+	libconfig::Setting &formatos_config = root.add("formatos_malla", libconfig::Setting::TypeArray);
+
+	map<string,bool>::iterator f;
+
+	for( f = formatos_malla.begin(); f != formatos_malla.end(); f++) {
+		if ((*f).second)
+			formatos_config.add(libconfig::Setting::TypeString) = (*f).first;
+	}
+
+	cfg.writeFile(output_file);
+
+}
+

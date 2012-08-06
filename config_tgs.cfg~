@@ -1,0 +1,20 @@
+TreeGrowthSimulator = false;
+GenerarMalla = false;
+GuardarMalla : 
+{
+  Comsol = false;
+  Debug = false;
+  Off = true;
+  Xyzu = true;
+};
+CargarMalla : 
+{
+  Comsol = false;
+  Matlab = false;
+  Off = true;
+  Xyzu = true;
+};
+MejorarMalla = true;
+RefinarMalla = false;
+DesrefinarMalla = false;
+DeformarMalla = false;

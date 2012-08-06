@@ -1,0 +1,26 @@
+#include <gtkmm.h>
+#include <iostream>
+
+class GUIMeshingToolGenerator { 
+
+	private:
+		Gtk::Window* mainWindow;
+		Gtk::Dialog* warningDialog;
+		Gtk::Button* generateButton;
+		Gtk::Button* okButton;
+		Gtk::CheckButton* check_xyzu;
+		Gtk::CheckButton* check_matlab;
+		Gtk::CheckButton* check_off;
+		Gtk::CheckButton* check_comsol;
+
+	public:
+		GUIMeshingToolGenerator();
+		~GUIMeshingToolGenerator();
+		Gtk::Window* GetMainWindow();
+		Gtk::Dialog* GetWarningDialog();
+		void on_generateButton_clicked();
+		void on_okButton_clicked();
+		void on_window_destroyed();
+		bool activeCheckbox();
+
+};

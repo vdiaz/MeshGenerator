@@ -1,0 +1,76 @@
+#include "GUIMeshingToolGenerator.hh"
+
+GUIMeshingToolGenerator::GUIMeshingToolGenerator()
+{
+	Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("GUIMeshingToolGenerator.glade");
+
+	builder->get_widget("mainWindow", mainWindow);
+	builder->get_widget("warningDialog", warningDialog);
+
+	builder->get_widget("generateButton", generateButton);
+	generateButton->signal_clicked().connect(sigc::mem_fun( *this, &GUIMeshingToolGenerator::on_generateButton_clicked ));
+
+	builder->get_widget("okButton", okButton);
+	okButton->signal_clicked().connect(sigc::mem_fun( *this, &GUIMeshingToolGenerator::on_okButton_clicked ));
+
+	builder->get_widget("check_xyzu", check_xyzu);	
+	builder->get_widget("check_matlab", check_matlab);	
+	builder->get_widget("check_off", check_off);
+	builder->get_widget("check_comsol", check_comsol);
+}
+
+Gtk::Window* GUIMeshingToolGenerator::GetMainWindow() { return mainWindow; }
+Gtk::Dialog* GUIMeshingToolGenerator::GetWarningDialog() { return warningDialog; }
+
+void GUIMeshingToolGenerator::on_generateButton_clicked()
+{
+	if (!activeCheckbox())
+	{
+		warningDialog->run();
+	}
+			
+	std::map<std::string, bool> formatos_malla;
+
+	if (check_xyzu->get_active())
+		formatos_malla.insert(std::make_pair("xyzu", true));
+
+	if (check_matlab->get_active())
+		formatos_malla.insert(std::make_pair("matlab", true));
+
+	if (check_off->get_active())
+		formatos_malla.insert(std::make_pair("off", true));
+
+	if (check_comsol->get_active())
+		formatos_malla.insert(std::make_pair("comsol", true));
+
+	ComandoMTG* comando = new GenerarConfig(formatos_malla);
+	comando->execute();
+		
+	Gtk::Main::quit();
+}
+
+void GUIMeshingToolGenerator::on_okButton_clicked()
+{
+	warningDialog->hide();
+}
+
+void GUIMeshingToolGenerator::on_window_destroyed()
+{
+	Gtk::Main::quit();
+}
+
+bool GUIMeshingToolGenerator::activeCheckbox()
+{
+	return check_xyzu->get_active() || check_matlab->get_active() || check_off->get_active() || check_comsol->get_active();
+}
+
+int main (int argc, char **argv)
+{
+	Gtk::Main kit(argc, argv);
+
+	GUIMeshingToolGenerator* mtGenerator = new GUIMeshingToolGenerator();
+	kit.run(*mtGenerator->GetMainWindow());
+
+	return 0;
+}
+

@@ -1,0 +1,20 @@
+#ifndef COMANDOMTG_H
+#define COMANDOMTG_H
+
+#include <string.h>
+#include <iostream>
+#include <map>
+using namespace std;
+
+class ComandoMTG {
+
+	protected:
+		map<string, bool> formatos_malla;
+
+	public:
+		ComandoMTG(map<std::string, bool> formatos_malla);
+		virtual void execute() {}
+		~ComandoMTG() { delete &formatos_malla; }
+};
+
+#endif

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="makefile" open="0" top="0" tabpos="0">
+		<Cursor position="76" topLine="0" />
+	</File>
+	<File name="src/GUIDialogAbrirMatlab.cc" open="0" top="0" tabpos="0">
+		<Cursor position="446" topLine="0" />
+	</File>
+	<File name="src/GUIDialogAbrirMatlab.hh" open="0" top="0" tabpos="0">
+		<Cursor position="462" topLine="1" />
+	</File>
+	<File name="src/GUIDialogAbrirMatlab_glade.hh" open="0" top="0" tabpos="0">
+		<Cursor position="491" topLine="39" />
+	</File>
+	<File name="src/GUIDialogCambios.cc" open="0" top="0" tabpos="4">
+		<Cursor position="2438" topLine="0" />
+	</File>
+	<File name="src/GUIDialogCambios.hh" open="0" top="0" tabpos="0">
+		<Cursor position="476" topLine="0" />
+	</File>
+	<File name="src/GUIDialogCambios_glade.cc" open="0" top="0" tabpos="2">
+		<Cursor position="4002" topLine="64" />
+	</File>
+	<File name="src/GUIDialogCambios_glade.hh" open="0" top="0" tabpos="5">
+		<Cursor position="1232" topLine="0" />
+	</File>
+	<File name="src/GUIDialogDesrefinar.cc" open="0" top="0" tabpos="2">
+		<Cursor position="111" topLine="11" />
+	</File>
+	<File name="src/GUIDialogDesrefinar_glade.cc" open="0" top="0" tabpos="0">
+		<Cursor position="1024" topLine="114" />
+	</File>
+	<File name="src/GUIDialogDesrefinar_glade.hh" open="0" top="0" tabpos="0">
+		<Cursor position="1766" topLine="0" />
+	</File>
+	<File name="src/GUIDialogDistribuirHormona.cc" open="0" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src/GUIDialogDistribuirHormona_glade.cc" open="0" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src/GUIDialogNuevaMalla.cc" open="0" top="0" tabpos="3">
+		<Cursor position="256" topLine="84" />
+	</File>
+	<File name="src/GUIDialogNuevaMalla.hh" open="0" top="0" tabpos="2">
+		<Cursor position="489" topLine="11" />
+	</File>
+	<File name="src/GUIDialogNuevaMalla_glade.cc" open="0" top="0" tabpos="1">
+		<Cursor position="6644" topLine="301" />
+	</File>
+	<File name="src/GUIDialogNuevaMalla_glade.hh" open="0" top="0" tabpos="0">
+		<Cursor position="1059" topLine="60" />
+	</File>
+	<File name="src/GUIDialogRefinar.cc" open="0" top="0" tabpos="1">
+		<Cursor position="1422" topLine="0" />
+	</File>
+	<File name="src/GUIDialogRefinar.hh" open="0" top="0" tabpos="0">
+		<Cursor position="522" topLine="0" />
+	</File>
+	<File name="src/GUIDialogRefinar_glade.cc" open="0" top="0" tabpos="0">
+		<Cursor position="8188" topLine="142" />
+	</File>
+	<File name="src/GUIDialogRefinar_glade.hh" open="0" top="0" tabpos="0">
+		<Cursor position="2207" topLine="23" />
+	</File>
+	<File name="src/GUIMeshingToolGenerator_glade.hh" open="0" top="0" tabpos="2">
+		<Cursor position="4444" topLine="6" />
+	</File>
+	<File name="src/GUIVentanaPrincipal.cc" open="0" top="0" tabpos="2">
+		<Cursor position="598" topLine="12" />
+	</File>
+	<File name="src/GUIVentanaPrincipal.hh" open="0" top="0" tabpos="5">
+		<Cursor position="3" topLine="0" />
+	</File>
+	<File name="src/GUIVentanaPrincipal_glade.cc" open="0" top="0" tabpos="3">
+		<Cursor position="14765" topLine="279" />
+	</File>
+	<File name="src/GUIVentanaPrincipal_glade.hh" open="0" top="0" tabpos="3">
+		<Cursor position="2833" topLine="69" />
+	</File>
+	<File name="src/alggeneracion.h" open="0" top="0" tabpos="6">
+		<Cursor position="169" topLine="0" />
+	</File>
+	<File name="src/areacara.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="368" topLine="0" />
+	</File>
+	<File name="src/comando.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="118" topLine="0" />
+	</File>
+	<File name="src/comando.h" open="0" top="0" tabpos="4">
+		<Cursor position="218" topLine="0" />
+	</File>
+	<File name="src/config.h" open="0" top="0" tabpos="1">
+		<Cursor position="162" topLine="0" />
+	</File>
+	<File name="src/configreader.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="59" topLine="0" />
+	</File>
+	<File name="src/configreader.h" open="0" top="0" tabpos="3">
+		<Cursor position="437" topLine="0" />
+	</File>
+	<File name="src/definiciones.h" open="0" top="0" tabpos="0">
+		<Cursor position="393" topLine="0" />
+	</File>
+	<File name="src/deformar.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="262" topLine="0" />
+	</File>
+	<File name="src/desrefinar.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="476" topLine="5" />
+	</File>
+	<File name="src/desrefinar.h" open="0" top="0" tabpos="0">
+		<Cursor position="63" topLine="0" />
+	</File>
+	<File name="src/distribuirhormona.cpp" open="1" top="1" tabpos="0">
+		<Cursor position="3215" topLine="75" />
+	</File>
+	<File name="src/generacilindro.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="360" topLine="0" />
+	</File>
+	<File name="src/generafromarchivosxyzu.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="760" topLine="6" />
+	</File>
+	<File name="src/generafromarchivosxyzu.h" open="0" top="0" tabpos="4">
+		<Cursor position="238" topLine="0" />
+	</File>
+	<File name="src/generafromcomsol_1.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="231" topLine="0" />
+	</File>
+	<File name="src/generar.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="892" topLine="24" />
+	</File>
+	<File name="src/generar.h" open="0" top="0" tabpos="6">
+		<Cursor position="536" topLine="0" />
+	</File>
+	<File name="src/guardar.h" open="0" top="0" tabpos="0">
+		<Cursor position="377" topLine="0" />
+	</File>
+	<File name="src/malla.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="61621" topLine="1675" />
+	</File>
+	<File name="src/mejorar.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="20" topLine="0" />
+	</File>
+	<File name="src/refinar.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="310" topLine="0" />
+	</File>
+	<File name="src/refinar.h" open="0" top="0" tabpos="0">
+		<Cursor position="187" topLine="0" />
+	</File>
+	<File name="src/treegrowthsimulator.cc" open="0" top="0" tabpos="0">
+		<Cursor position="347" topLine="14" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,1868 @@
+<HTML><HEAD><TITLE>
+Report on software metrics
+</TITLE>
+</HEAD>
+<BODY>
+<TABLE BORDER WIDTH=100%>
+<TR><TH COLSPAN=2>
+CCCC Software Metrics Report
+<BR> generated Tue Nov  1 18:31:53 2011
+
+</TR>
+<TR>
+<TH><H4><A HREF="#projsum">Project Summary</A></H4></TH>
+<TD>
+Summary table of high level measures summed over all files processed in the current run.
+</TR>
+<TR>
+<TH><H4><A HREF="#procsum">Procedural Metrics Summary</A></H4></TH>
+<TD>
+Table of procedural measures (i.e. lines of code, lines of comment, McCabe's cyclomatic complexity summed over each module.
+</TR>
+<TR>
+<TH><H4><A HREF="#oodesign">Object Oriented Design</A></H4></TH>
+<TD>
+Table of four of the 6 metrics proposed by Chidamber and Kemerer in their various papers on 'a metrics suite for object oriented design'.
+</TR>
+<TR>
+<TH><H4><A HREF="#structsum">Structural Metrics Summary</A></H4></TH>
+<TD>
+Structural metrics based on the relationships of each module with others.  Includes fan-out (i.e. number of other modules the current module uses), fan-in (number of other modules which use the current module), and the Information Flow measure suggested by Henry and Kafura, which combines these to give a measure of coupling for the module.
+</TR>
+<TR>
+<TH><H4><A HREF="#other">Other Extents</A></H4></TH>
+<TD>
+Lexical counts for parts of submitted source files which the analyser was unable to assign to a module. Each record in this table relates to either a part of the code which triggered a parse failure, or to the residual lexical counts relating to parts of a file not associated with a specific module.
+</TR>
+<TR>
+<TH><H4><A HREF="#infocccc">About CCCC</A></H4></TH>
+<TD>
+A description of the CCCC program.
+</TR>
+</TR></TABLE>
+<H1><A NAME="projsum">Project Summary</A></H1>
+This table shows measures over the project as a whole.
+<UL>
+<LI>NOM = Number of modules<BR>
+Number of non-trivial modules identified by the analyser.  Non-trivial modules include all classes, and any other module for which member functions are identified.
+<LI>LOC = Lines of Code<BR>
+Number of non-blank, non-comment lines of source code counted by the analyser.
+<LI>COM = Lines of Comments<BR>
+Number of lines of comment identified by the analyser
+<LI>MVG = McCabe's Cyclomatic Complexity<BR>
+A measure of the decision complexity of the functions which make up the program.The strict definition of this measure is that it is the number of linearly independent routes through a directed acyclic graph which maps the flow of control of a subprogram.  The analyser counts this by recording the number of distinct decision outcomes contained within each function, which yields a good approximation to the formally defined version of the measure.
+<LI>L_C = Lines of code per line of comment<BR>
+Indicates density of comments with respect to textual size of program
+<LI>M_C = Cyclomatic Complexity per line of comment<BR>
+Indicates density of comments with respect to logical complexity of program
+<LI>IF4 = Information Flow measure<BR>
+Measure of information flow between modules suggested by Henry and Kafura. The analyser makes an approximate count of this by counting inter-module couplings identified in the module interfaces.
+</UL>
+Two variants on the information flow measure IF4 are also presented, one (IF4v) calculated using only relationships in the visible part of the module interface, and the other (IF4c) calculated using only those relationships which imply that changes to the client must be recompiled of the supplier's definition changes.
+
+<TABLE BORDER WIDTH=100%>
+<TR>
+<TH BGCOLOR="AQUA" WIDTH=70%>Metric</TH><TH BGCOLOR="AQUA" WIDTH=10%>Tag</TH><TH BGCOLOR="AQUA" WIDTH=10%>Overall</TH><TH BGCOLOR="AQUA" WIDTH=10%>Per Module</TH></TR>
+<TR>
+<TD>Number of modules</TD><TD>NOM</TD><TD ALIGN=RIGHT>   111</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD WIDTH=700%>Lines of Code</TD><TD WIDTH=120%>LOC</TD><TD ALIGN=RIGHT>  9206</TD><TD ALIGN=RIGHT>82.937</TD></TR>
+<TR>
+<TD>McCabe's Cyclomatic Number</TD><TD>MVG</TD><TD ALIGN=RIGHT>  1340</TD><TD ALIGN=RIGHT>12.072</TD></TR>
+<TR>
+<TD>Lines of Comment</TD><TD>COM</TD><TD ALIGN=RIGHT>  1370</TD><TD ALIGN=RIGHT>12.342</TD></TR>
+<TR>
+<TD>LOC/COM</TD><TD>L_C</TD><TD ALIGN=RIGHT> 6.720</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>MVG/COM</TD><TD>M_C</TD><TD ALIGN=RIGHT> 0.978</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>Information Flow measure ( &nbsp;inclusive&nbsp;)</TD><TD>IF4</TD><TD ALIGN=RIGHT> 55311</TD><TD ALIGN=RIGHT> 498.297</TD></TR>
+<TR>
+<TD>Information Flow measure ( &nbsp;visible&nbsp;)</TD><TD>IF4v</TD><TD ALIGN=RIGHT> 38348</TD><TD ALIGN=RIGHT> 345.477</TD></TR>
+<TR>
+<TD>Information Flow measure ( &nbsp;concrete&nbsp;)</TD><TD>IF4c</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT>   0.252</TD></TR>
+<TR>
+<TD>Lines of Code rejected by parser</TD><TD>REJ</TD><TD ALIGN=RIGHT>   148</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H1><A NAME="procsum">Procedural Metrics Summary</A></H1>
+For descriptions of each of these metrics see the information preceding the project summary table.
+
+The label cell for each row in this table provides a link to the functions table in the detailed report for the module in question
+<TABLE BORDER WIDTH=100%>
+<TR>
+<TH BGCOLOR="AQUA">Module Name</TH><TH BGCOLOR="AQUA" WIDTH=8%>LOC</TH><TH BGCOLOR="AQUA" WIDTH=8%>MVG</TH><TH BGCOLOR="AQUA" WIDTH=8%>COM</TH><TH BGCOLOR="AQUA" WIDTH=8%>L_C</TH><TH BGCOLOR="AQUA" WIDTH=8%>M_C</TH></TR>
+<TR>
+<TD><A HREF="AlgAlmacenamiento.html#procdet">
+AlgAlmacenamiento</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlgDesplazamiento.html#procdet">
+AlgDesplazamiento</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlgDesrefinamiento.html#procdet">
+AlgDesrefinamiento</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlgGeneracion.html#procdet">
+AlgGeneracion</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlgMejoramiento.html#procdet">
+AlgMejoramiento</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlgRefinamiento.html#procdet">
+AlgRefinamiento</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Alignment.html#procdet">
+Alignment</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToComsol_1.html#procdet">
+AlmacenaToComsol_1</A>
+</TD><TD ALIGN=RIGHT>    40</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT> 6.667</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToMllDebug.html#procdet">
+AlmacenaToMllDebug</A>
+</TD><TD ALIGN=RIGHT>   101</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>16.833</EM></TD><TD ALIGN=RIGHT> 2.500</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToOff.html#procdet">
+AlmacenaToOff</A>
+</TD><TD ALIGN=RIGHT>    47</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>11.750</EM></TD><TD ALIGN=RIGHT> 1.250</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToXYZU.html#procdet">
+AlmacenaToXYZU</A>
+</TD><TD ALIGN=RIGHT>    90</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>18.000</EM></TD><TD ALIGN=RIGHT> 1.400</TD></TR>
+<TR>
+<TD><A HREF="AnguloMinimo.html#procdet">
+AnguloMinimo</A>
+</TD><TD ALIGN=RIGHT>    21</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT> 7.000</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Arco.html#procdet">
+Arco</A>
+</TD><TD ALIGN=RIGHT>   105</TD><TD ALIGN=RIGHT>    19</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT> 7.000</TD><TD ALIGN=RIGHT> 1.267</TD></TR>
+<TR>
+<TD><A HREF="Arcos.html#procdet">
+Arcos</A>
+</TD><TD ALIGN=RIGHT>   115</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT>    27</TD><TD ALIGN=RIGHT> 4.259</TD><TD ALIGN=RIGHT> 1.037</TD></TR>
+<TR>
+<TD><A HREF="AreaCara.html#procdet">
+AreaCara</A>
+</TD><TD ALIGN=RIGHT>    20</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT> 5.000</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Button.html#procdet">
+Button</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Cara.html#procdet">
+Cara</A>
+</TD><TD ALIGN=RIGHT>   166</TD><TD ALIGN=RIGHT>    35</TD><TD ALIGN=RIGHT>    24</TD><TD ALIGN=RIGHT> 6.917</TD><TD ALIGN=RIGHT> 1.458</TD></TR>
+<TR>
+<TD><A HREF="Caras.html#procdet">
+Caras</A>
+</TD><TD ALIGN=RIGHT>    90</TD><TD ALIGN=RIGHT>    18</TD><TD ALIGN=RIGHT>    23</TD><TD ALIGN=RIGHT> 3.913</TD><TD ALIGN=RIGHT> 0.783</TD></TR>
+<TR>
+<TD><A HREF="CheckMenuItem.html#procdet">
+CheckMenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Comando.html#procdet">
+Comando</A>
+</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Combo.html#procdet">
+Combo</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Criterio.html#procdet">
+Criterio</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Deformar.html#procdet">
+Deformar</A>
+</TD><TD ALIGN=RIGHT>    24</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT> 4.000</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="DelaunayLongestEdgeBisection.html#procdet">
+DelaunayLongestEdgeBisection</A>
+</TD><TD ALIGN=RIGHT>    22</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT> 4.400</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="DesrefinamientoEdgeCollapse.html#procdet">
+DesrefinamientoEdgeCollapse</A>
+</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>    27</TD><TD ALIGN=RIGHT> 1.037</TD><TD ALIGN=RIGHT> 0.259</TD></TR>
+<TR>
+<TD><A HREF="Desrefinar.html#procdet">
+Desrefinar</A>
+</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT> 4.667</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Dialog.html#procdet">
+Dialog</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="DistribuirHormona.html#procdet">
+DistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>   131</TD><TD ALIGN=RIGHT>    27</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 8.733</EM></TD><TD ALIGN=RIGHT> 1.800</TD></TR>
+<TR>
+<TD><A HREF="DrawingArea.html#procdet">
+DrawingArea</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Entry.html#procdet">
+Entry</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Frame.html#procdet">
+Frame</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab.html#procdet">
+GUIDialogAbrirMatlab</A>
+</TD><TD ALIGN=RIGHT>    19</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab_glade.html#procdet">
+GUIDialogAbrirMatlab_glade</A>
+</TD><TD ALIGN=RIGHT>   107</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>13.375</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios.html#procdet">
+GUIDialogCambios</A>
+</TD><TD ALIGN=RIGHT>    58</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>14.500</EM></TD><TD ALIGN=RIGHT> 2.000</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios_glade.html#procdet">
+GUIDialogCambios_glade</A>
+</TD><TD ALIGN=RIGHT>   168</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>16.800</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar.html#procdet">
+GUIDialogDesrefinar</A>
+</TD><TD ALIGN=RIGHT>    31</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT> 2.583</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar_glade.html#procdet">
+GUIDialogDesrefinar_glade</A>
+</TD><TD ALIGN=RIGHT>   116</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>12.889</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona.html#procdet">
+GUIDialogDistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona_glade.html#procdet">
+GUIDialogDistribuirHormona_glade</A>
+</TD><TD ALIGN=RIGHT>   127</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>15.875</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion.html#procdet">
+GUIDialogInformacion</A>
+</TD><TD ALIGN=RIGHT>   106</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>15.143</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion_glade.html#procdet">
+GUIDialogInformacion_glade</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   590</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>65.556</STRONG></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla.html#procdet">
+GUIDialogNuevaMalla</A>
+</TD><TD ALIGN=RIGHT>    75</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT> 4.412</TD><TD ALIGN=RIGHT> 1.000</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla_glade.html#procdet">
+GUIDialogNuevaMalla_glade</A>
+</TD><TD ALIGN=RIGHT>   330</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>36.667</STRONG></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar.html#procdet">
+GUIDialogRefinar</A>
+</TD><TD ALIGN=RIGHT>    55</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>    13</TD><TD ALIGN=RIGHT> 4.231</TD><TD ALIGN=RIGHT> 0.615</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar_glade.html#procdet">
+GUIDialogRefinar_glade</A>
+</TD><TD ALIGN=RIGHT>   186</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>20.667</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal.html#procdet">
+GUIVentanaPrincipal</A>
+</TD><TD ALIGN=RIGHT>   466</TD><TD ALIGN=RIGHT>    73</TD><TD ALIGN=RIGHT>    11</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>42.364</STRONG></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 6.636</EM></TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal_glade.html#procdet">
+GUIVentanaPrincipal_glade</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   567</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>63.000</STRONG></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GdkEventButton.html#procdet">
+GdkEventButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GdkEventConfigure.html#procdet">
+GdkEventConfigure</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GdkEventExpose.html#procdet">
+GdkEventExpose</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GdkEventMotion.html#procdet">
+GdkEventMotion</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="GeneraCilindro.html#procdet">
+GeneraCilindro</A>
+</TD><TD ALIGN=RIGHT>   255</TD><TD ALIGN=RIGHT>    37</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 9.107</EM></TD><TD ALIGN=RIGHT> 1.321</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromArchivosXYZU.html#procdet">
+GeneraFromArchivosXYZU</A>
+</TD><TD ALIGN=RIGHT>   145</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>16.111</EM></TD><TD ALIGN=RIGHT> 1.778</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromComsol_1.html#procdet">
+GeneraFromComsol_1</A>
+</TD><TD ALIGN=RIGHT>   101</TD><TD ALIGN=RIGHT>    14</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>16.833</EM></TD><TD ALIGN=RIGHT> 2.333</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMatLab.html#procdet">
+GeneraFromMatLab</A>
+</TD><TD ALIGN=RIGHT>   362</TD><TD ALIGN=RIGHT>    54</TD><TD ALIGN=RIGHT>    25</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>14.480</EM></TD><TD ALIGN=RIGHT> 2.160</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMedula.html#procdet">
+GeneraFromMedula</A>
+</TD><TD ALIGN=RIGHT>   153</TD><TD ALIGN=RIGHT>    25</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 9.562</EM></TD><TD ALIGN=RIGHT> 1.562</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromOFF.html#procdet">
+GeneraFromOFF</A>
+</TD><TD ALIGN=RIGHT>   115</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>14.375</EM></TD><TD ALIGN=RIGHT> 2.000</TD></TR>
+<TR>
+<TD><A HREF="Generar.html#procdet">
+Generar</A>
+</TD><TD ALIGN=RIGHT>    58</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 9.667</EM></TD><TD ALIGN=RIGHT> 1.000</TD></TR>
+<TR>
+<TD><A HREF="GlademmData.html#procdet">
+GlademmData</A>
+</TD><TD ALIGN=RIGHT>    88</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>    60</TD><TD ALIGN=RIGHT> 1.467</TD><TD ALIGN=RIGHT> 0.133</TD></TR>
+<TR>
+<TD><A HREF="Guardar.html#procdet">
+Guardar</A>
+</TD><TD ALIGN=RIGHT>    28</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT> 4.000</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="HBox.html#procdet">
+HBox</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Image.html#procdet">
+Image</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="ImageMenuItem.html#procdet">
+ImageMenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="InformacionMalla.html#procdet">
+InformacionMalla</A>
+</TD><TD ALIGN=RIGHT>    96</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>    21</TD><TD ALIGN=RIGHT> 4.571</TD><TD ALIGN=RIGHT> 0.762</TD></TR>
+<TR>
+<TD><A HREF="Informar.html#procdet">
+Informar</A>
+</TD><TD ALIGN=RIGHT>    36</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>12.000</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Label.html#procdet">
+Label</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMaximo.html#procdet">
+LargoArcoMaximo</A>
+</TD><TD ALIGN=RIGHT>    19</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMinimo.html#procdet">
+LargoArcoMinimo</A>
+</TD><TD ALIGN=RIGHT>    19</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Lepp.html#procdet">
+Lepp</A>
+</TD><TD ALIGN=RIGHT>    25</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT> 5.000</TD><TD ALIGN=RIGHT> 1.200</TD></TR>
+<TR>
+<TD><A HREF="LeppDelaunay.html#procdet">
+LeppDelaunay</A>
+</TD><TD ALIGN=RIGHT>   106</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT>    23</TD><TD ALIGN=RIGHT> 4.609</TD><TD ALIGN=RIGHT> 0.739</TD></TR>
+<TR>
+<TD><A HREF="Malla.html#procdet">
+Malla</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>  1703</EM></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   423</EM></TD><TD ALIGN=RIGHT>   310</TD><TD ALIGN=RIGHT> 5.494</TD><TD ALIGN=RIGHT> 1.365</TD></TR>
+<TR>
+<TD><A HREF="MejDelaunay.html#procdet">
+MejDelaunay</A>
+</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Mejorar.html#procdet">
+Mejorar</A>
+</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Menu.html#procdet">
+Menu</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="MenuBar.html#procdet">
+MenuBar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="MenuItem.html#procdet">
+MenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="NoVerificacion.html#procdet">
+NoVerificacion</A>
+</TD><TD ALIGN=RIGHT>    14</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Nodo.html#procdet">
+Nodo</A>
+</TD><TD ALIGN=RIGHT>   154</TD><TD ALIGN=RIGHT>    31</TD><TD ALIGN=RIGHT>    29</TD><TD ALIGN=RIGHT> 5.310</TD><TD ALIGN=RIGHT> 1.069</TD></TR>
+<TR>
+<TD><A HREF="Nodos.html#procdet">
+Nodos</A>
+</TD><TD ALIGN=RIGHT>   196</TD><TD ALIGN=RIGHT>    53</TD><TD ALIGN=RIGHT>    37</TD><TD ALIGN=RIGHT> 5.297</TD><TD ALIGN=RIGHT> 1.432</TD></TR>
+<TR>
+<TD><A HREF="Polinomio.html#procdet">
+Polinomio</A>
+</TD><TD ALIGN=RIGHT>   161</TD><TD ALIGN=RIGHT>    42</TD><TD ALIGN=RIGHT>    19</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 8.474</EM></TD><TD ALIGN=RIGHT> 2.211</TD></TR>
+<TR>
+<TD><A HREF="Punto.html#procdet">
+Punto</A>
+</TD><TD ALIGN=RIGHT>    68</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT> 4.000</TD><TD ALIGN=RIGHT> 0.706</TD></TR>
+<TR>
+<TD><A HREF="RadioButton.html#procdet">
+RadioButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="RefPtr.html#procdet">
+RefPtr</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Refinar.html#procdet">
+Refinar</A>
+</TD><TD ALIGN=RIGHT>    32</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT> 4.000</TD><TD ALIGN=RIGHT> 0.750</TD></TR>
+<TR>
+<TD><A HREF="ScrolledWindow.html#procdet">
+ScrolledWindow</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="SegTriInt.html#procdet">
+SegTriInt</A>
+</TD><TD ALIGN=RIGHT>    38</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM> 7.600</EM></TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="SegmentTriangleIntersection.html#procdet">
+SegmentTriangleIntersection</A>
+</TD><TD ALIGN=RIGHT>   194</TD><TD ALIGN=RIGHT>   107</TD><TD ALIGN=RIGHT>    71</TD><TD ALIGN=RIGHT> 2.732</TD><TD ALIGN=RIGHT> 1.507</TD></TR>
+<TR>
+<TD><A HREF="SeparatorToolItem.html#procdet">
+SeparatorToolItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="SimpleGLScene.html#procdet">
+SimpleGLScene</A>
+</TD><TD ALIGN=RIGHT>   355</TD><TD ALIGN=RIGHT>    59</TD><TD ALIGN=RIGHT>    64</TD><TD ALIGN=RIGHT> 5.547</TD><TD ALIGN=RIGHT> 0.922</TD></TR>
+<TR>
+<TD><A HREF="SpinButton.html#procdet">
+SpinButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Statusbar.html#procdet">
+Statusbar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Table.html#procdet">
+Table</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="TextView.html#procdet">
+TextView</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="ToolButton.html#procdet">
+ToolButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Toolbar.html#procdet">
+Toolbar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="VBox.html#procdet">
+VBox</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Vect.html#procdet">
+Vect</A>
+</TD><TD ALIGN=RIGHT>    80</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT>    21</TD><TD ALIGN=RIGHT> 3.810</TD><TD ALIGN=RIGHT> 0.810</TD></TR>
+<TR>
+<TD><A HREF="VerificacionLocal.html#procdet">
+VerificacionLocal</A>
+</TD><TD ALIGN=RIGHT>   114</TD><TD ALIGN=RIGHT>    27</TD><TD ALIGN=RIGHT>    23</TD><TD ALIGN=RIGHT> 4.957</TD><TD ALIGN=RIGHT> 1.174</TD></TR>
+<TR>
+<TD><A HREF="VerificacionNodosVecinos.html#procdet">
+VerificacionNodosVecinos</A>
+</TD><TD ALIGN=RIGHT>   126</TD><TD ALIGN=RIGHT>    18</TD><TD ALIGN=RIGHT>    70</TD><TD ALIGN=RIGHT> 1.800</TD><TD ALIGN=RIGHT> 0.257</TD></TR>
+<TR>
+<TD><A HREF="Widget.html#procdet">
+Widget</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="Window.html#procdet">
+Window</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="anonymous.html#procdet">
+anonymous</A>
+</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="bool.html#procdet">
+bool</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="connection.html#procdet">
+connection</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="gsl_histogram.html#procdet">
+gsl_histogram</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="list.html#procdet">
+list</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="ostream.html#procdet">
+ostream</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="string.html#procdet">
+string</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="tPointd.html#procdet">
+tPointd</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="tPointi.html#procdet">
+tPointi</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+<TR>
+<TD><A HREF="vector.html#procdet">
+vector</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>------</TD><TD ALIGN=RIGHT>------</TD></TR>
+</TABLE>
+<H1><A NAME="oodesign">Object Oriented Design</A></H1>
+<UL>
+<LI>WMC = Weighted methods per class<BR>
+The sum of a weighting function over the functions of the module.  Two different weighting functions are applied: WMC1 uses the nominal weight of 1 for each function, and hence measures the number of functions, WMCv uses a weighting function which is 1 for functions accessible to other modules, 0 for private functions.
+<LI>DIT = Depth of inheritance tree<BR>
+The length of the longest path of inheritance ending at the current module.  The deeper the inheritance tree for a module, the harder it may be to predict its behaviour.  On the other hand, increasing depth gives the potential of greater reuse by the current module of behaviour defined for ancestor classes.
+<LI>NOC = Number of children<BR>
+The number of modules which inherit directly from the current module.  Moderate values of this measure indicate scope for reuse, however high values may indicate an inappropriate abstraction in the design.
+<LI>CBO = Coupling between objects<BR>
+The number of other modules which are coupled to the current module either as a client or a supplier. Excessive coupling indicates weakness of module encapsulation and may inhibit reuse.
+</UL>
+
+The label cell for each row in this table provides a link to the module summary table in the detailed report for the module in question
+<TABLE BORDER WIDTH=100%>
+<TR>
+<TH BGCOLOR="AQUA" WIDTH=50%>Module Name</TH><TH BGCOLOR="AQUA" WIDTH=10%>WMC1</TH><TH BGCOLOR="AQUA" WIDTH=10%>WMCv</TH><TH BGCOLOR="AQUA" WIDTH=10%>DIT</TH><TH BGCOLOR="AQUA" WIDTH=10%>NOC</TH><TH BGCOLOR="AQUA" WIDTH=10%>CBO</TH></TR>
+<TR>
+<TD><A HREF="AlgAlmacenamiento.html#summary">
+AlgAlmacenamiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     7</TD></TR>
+<TR>
+<TD><A HREF="AlgDesplazamiento.html#summary">
+AlgDesplazamiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="AlgDesrefinamiento.html#summary">
+AlgDesrefinamiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="AlgGeneracion.html#summary">
+AlgGeneracion</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     6</EM></TD><TD ALIGN=RIGHT>     7</TD></TR>
+<TR>
+<TD><A HREF="AlgMejoramiento.html#summary">
+AlgMejoramiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="AlgRefinamiento.html#summary">
+AlgRefinamiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="Alignment.html#summary">
+Alignment</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     7</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToComsol_1.html#summary">
+AlmacenaToComsol_1</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToMllDebug.html#summary">
+AlmacenaToMllDebug</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToOff.html#summary">
+AlmacenaToOff</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToXYZU.html#summary">
+AlmacenaToXYZU</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="AnguloMinimo.html#summary">
+AnguloMinimo</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Arco.html#summary">
+Arco</A>
+</TD><TD ALIGN=RIGHT>    17</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    17</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Arcos.html#summary">
+Arcos</A>
+</TD><TD ALIGN=RIGHT>    13</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    13</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="AreaCara.html#summary">
+AreaCara</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Button.html#summary">
+Button</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD></TR>
+<TR>
+<TD><A HREF="Cara.html#summary">
+Cara</A>
+</TD><TD ALIGN=RIGHT>    20</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    20</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Caras.html#summary">
+Caras</A>
+</TD><TD ALIGN=RIGHT>    11</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    11</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="CheckMenuItem.html#summary">
+CheckMenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Comando.html#summary">
+Comando</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     9</TD></TR>
+<TR>
+<TD><A HREF="Combo.html#summary">
+Combo</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="Criterio.html#summary">
+Criterio</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>    12</TD></TR>
+<TR>
+<TD><A HREF="Deformar.html#summary">
+Deformar</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="DelaunayLongestEdgeBisection.html#summary">
+DelaunayLongestEdgeBisection</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="DesrefinamientoEdgeCollapse.html#summary">
+DesrefinamientoEdgeCollapse</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="Desrefinar.html#summary">
+Desrefinar</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="Dialog.html#summary">
+Dialog</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT>     7</TD></TR>
+<TR>
+<TD><A HREF="DistribuirHormona.html#summary">
+DistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="DrawingArea.html#summary">
+DrawingArea</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Entry.html#summary">
+Entry</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Frame.html#summary">
+Frame</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     7</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab.html#summary">
+GUIDialogAbrirMatlab</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab_glade.html#summary">
+GUIDialogAbrirMatlab_glade</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     8</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios.html#summary">
+GUIDialogCambios</A>
+</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios_glade.html#summary">
+GUIDialogCambios_glade</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    13</EM></TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar.html#summary">
+GUIDialogDesrefinar</A>
+</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar_glade.html#summary">
+GUIDialogDesrefinar_glade</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    11</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona.html#summary">
+GUIDialogDistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona_glade.html#summary">
+GUIDialogDistribuirHormona_glade</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     9</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion.html#summary">
+GUIDialogInformacion</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion_glade.html#summary">
+GUIDialogInformacion_glade</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     9</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla.html#summary">
+GUIDialogNuevaMalla</A>
+</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla_glade.html#summary">
+GUIDialogNuevaMalla_glade</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    13</EM></TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar.html#summary">
+GUIDialogRefinar</A>
+</TD><TD ALIGN=RIGHT>    11</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar_glade.html#summary">
+GUIDialogRefinar_glade</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    11</TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal.html#summary">
+GUIVentanaPrincipal</A>
+</TD><TD ALIGN=RIGHT>    30</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal_glade.html#summary">
+GUIVentanaPrincipal_glade</A>
+</TD><TD ALIGN=RIGHT>    29</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    20</EM></TD></TR>
+<TR>
+<TD><A HREF="GdkEventButton.html#summary">
+GdkEventButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GdkEventConfigure.html#summary">
+GdkEventConfigure</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GdkEventExpose.html#summary">
+GdkEventExpose</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GdkEventMotion.html#summary">
+GdkEventMotion</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="GeneraCilindro.html#summary">
+GeneraCilindro</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromArchivosXYZU.html#summary">
+GeneraFromArchivosXYZU</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromComsol_1.html#summary">
+GeneraFromComsol_1</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMatLab.html#summary">
+GeneraFromMatLab</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMedula.html#summary">
+GeneraFromMedula</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     6</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromOFF.html#summary">
+GeneraFromOFF</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Generar.html#summary">
+Generar</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="GlademmData.html#summary">
+GlademmData</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD></TR>
+<TR>
+<TD><A HREF="Guardar.html#summary">
+Guardar</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="HBox.html#summary">
+HBox</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="Image.html#summary">
+Image</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="ImageMenuItem.html#summary">
+ImageMenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="InformacionMalla.html#summary">
+InformacionMalla</A>
+</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="Informar.html#summary">
+Informar</A>
+</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="Label.html#summary">
+Label</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMaximo.html#summary">
+LargoArcoMaximo</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMinimo.html#summary">
+LargoArcoMinimo</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Lepp.html#summary">
+Lepp</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="LeppDelaunay.html#summary">
+LeppDelaunay</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="Malla.html#summary">
+Malla</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    70</EM></TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    70</STRONG></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    40</STRONG></TD></TR>
+<TR>
+<TD><A HREF="MejDelaunay.html#summary">
+MejDelaunay</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Mejorar.html#summary">
+Mejorar</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="Menu.html#summary">
+Menu</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="MenuBar.html#summary">
+MenuBar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="MenuItem.html#summary">
+MenuItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="NoVerificacion.html#summary">
+NoVerificacion</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Nodo.html#summary">
+Nodo</A>
+</TD><TD ALIGN=RIGHT>    21</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    21</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="Nodos.html#summary">
+Nodos</A>
+</TD><TD ALIGN=RIGHT>    18</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    18</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="Polinomio.html#summary">
+Polinomio</A>
+</TD><TD ALIGN=RIGHT>    15</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    15</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Punto.html#summary">
+Punto</A>
+</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="RadioButton.html#summary">
+RadioButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="RefPtr.html#summary">
+RefPtr</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Refinar.html#summary">
+Refinar</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="ScrolledWindow.html#summary">
+ScrolledWindow</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="SegTriInt.html#summary">
+SegTriInt</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="SegmentTriangleIntersection.html#summary">
+SegmentTriangleIntersection</A>
+</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="SeparatorToolItem.html#summary">
+SeparatorToolItem</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="SimpleGLScene.html#summary">
+SimpleGLScene</A>
+</TD><TD ALIGN=RIGHT>    18</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    11</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    11</TD></TR>
+<TR>
+<TD><A HREF="SpinButton.html#summary">
+SpinButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     6</TD></TR>
+<TR>
+<TD><A HREF="Statusbar.html#summary">
+Statusbar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Table.html#summary">
+Table</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="TextView.html#summary">
+TextView</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="ToolButton.html#summary">
+ToolButton</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Toolbar.html#summary">
+Toolbar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="VBox.html#summary">
+VBox</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     6</TD></TR>
+<TR>
+<TD><A HREF="Vect.html#summary">
+Vect</A>
+</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    16</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD></TR>
+<TR>
+<TD><A HREF="VerificacionLocal.html#summary">
+VerificacionLocal</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="VerificacionNodosVecinos.html#summary">
+VerificacionNodosVecinos</A>
+</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="Widget.html#summary">
+Widget</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Window.html#summary">
+Window</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="anonymous.html#summary">
+anonymous</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="bool.html#summary">
+bool</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD></TR>
+<TR>
+<TD><A HREF="connection.html#summary">
+connection</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="gsl_histogram.html#summary">
+gsl_histogram</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="list.html#summary">
+list</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="ostream.html#summary">
+ostream</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="string.html#summary">
+string</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    13</EM></TD></TR>
+<TR>
+<TD><A HREF="tPointd.html#summary">
+tPointd</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="tPointi.html#summary">
+tPointi</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD></TR>
+<TR>
+<TD><A HREF="vector.html#summary">
+vector</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    10</TD></TR>
+</TABLE>
+<H1><A NAME="structsum">Structural Metrics Summary</A></H1>
+<UL>
+<LI>FI = Fan-in<BR>
+The number of other modules which pass information into the current module.
+<LI>FO = Fan-out<BR>
+The number of other modules into which the current module passes information
+<LI>IF4 = Information Flow measure<BR>
+A composite measure of structural complexity, calculated as the square of the product of the fan-in and fan-out of a single module.  Proposed by Henry and Kafura.
+</UL>
+Note that the fan-in and fan-out are calculated by examining the interface of each module.  As noted above, three variants of each each of these measures are presented: a count restricted to the part of the interface which is externally visible, a count which only includes relationships which imply the client module needs to be recompiled if the supplier's implementation changes, and an inclusive count
+
+The label cell for each row in this table provides a link to the relationships table in the detailed report for the module in question
+
+<TABLE BORDER WIDTH=100%>
+<TR>
+<TH BGCOLOR=AQUA ROWSPAN=2>Module Name</TH>
+<TH BGCOLOR=AQUA COLSPAN=3>Fan-out</TH>
+<TH BGCOLOR=AQUA COLSPAN=3>Fan-in</TH>
+<TH BGCOLOR=AQUA COLSPAN=3>IF4</TH>
+</TR>
+<TH BGCOLOR="AQUA" WIDTH=7%>vis</TH><TH BGCOLOR="AQUA" WIDTH=7%>con</TH><TH BGCOLOR="AQUA" WIDTH=7%>inc</TH><TH BGCOLOR="AQUA" WIDTH=7%>vis</TH><TH BGCOLOR="AQUA" WIDTH=7%>con</TH><TH BGCOLOR="AQUA" WIDTH=7%>incl</TH><TH BGCOLOR="AQUA" WIDTH=7%>vis</TH><TH BGCOLOR="AQUA" WIDTH=7%>con</TH><TH BGCOLOR="AQUA" WIDTH=7%>inc</TH></TR>
+<TR>
+<TD><A HREF="AlgAlmacenamiento.html#structdet">
+AlgAlmacenamiento</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>   100</TD></TR>
+<TR>
+<TD><A HREF="AlgDesplazamiento.html#structdet">
+AlgDesplazamiento</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    16</TD></TR>
+<TR>
+<TD><A HREF="AlgDesrefinamiento.html#structdet">
+AlgDesrefinamiento</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    16</TD></TR>
+<TR>
+<TD><A HREF="AlgGeneracion.html#structdet">
+AlgGeneracion</A>
+</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AlgMejoramiento.html#structdet">
+AlgMejoramiento</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="AlgRefinamiento.html#structdet">
+AlgRefinamiento</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    36</TD></TR>
+<TR>
+<TD><A HREF="Alignment.html#structdet">
+Alignment</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToComsol_1.html#structdet">
+AlmacenaToComsol_1</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToMllDebug.html#structdet">
+AlmacenaToMllDebug</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToOff.html#structdet">
+AlmacenaToOff</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AlmacenaToXYZU.html#structdet">
+AlmacenaToXYZU</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="AnguloMinimo.html#structdet">
+AnguloMinimo</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Arco.html#structdet">
+Arco</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Arcos.html#structdet">
+Arcos</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    36</TD></TR>
+<TR>
+<TD><A HREF="AreaCara.html#structdet">
+AreaCara</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Button.html#structdet">
+Button</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Cara.html#structdet">
+Cara</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD></TR>
+<TR>
+<TD><A HREF="Caras.html#structdet">
+Caras</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    36</TD></TR>
+<TR>
+<TD><A HREF="CheckMenuItem.html#structdet">
+CheckMenuItem</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Comando.html#structdet">
+Comando</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    64</TD></TR>
+<TR>
+<TD><A HREF="Combo.html#structdet">
+Combo</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Criterio.html#structdet">
+Criterio</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     9</EM></TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>    11</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    81</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   121</EM></TD></TR>
+<TR>
+<TD><A HREF="Deformar.html#structdet">
+Deformar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="DelaunayLongestEdgeBisection.html#structdet">
+DelaunayLongestEdgeBisection</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="DesrefinamientoEdgeCollapse.html#structdet">
+DesrefinamientoEdgeCollapse</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Desrefinar.html#structdet">
+Desrefinar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Dialog.html#structdet">
+Dialog</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="DistribuirHormona.html#structdet">
+DistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="DrawingArea.html#structdet">
+DrawingArea</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Entry.html#structdet">
+Entry</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Frame.html#structdet">
+Frame</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab.html#structdet">
+GUIDialogAbrirMatlab</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogAbrirMatlab_glade.html#structdet">
+GUIDialogAbrirMatlab_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     7</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    49</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    49</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios.html#structdet">
+GUIDialogCambios</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogCambios_glade.html#structdet">
+GUIDialogCambios_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    12</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>   144</STRONG></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   144</EM></TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar.html#structdet">
+GUIDialogDesrefinar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDesrefinar_glade.html#structdet">
+GUIDialogDesrefinar_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    10</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   100</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>   100</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona.html#structdet">
+GUIDialogDistribuirHormona</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogDistribuirHormona_glade.html#structdet">
+GUIDialogDistribuirHormona_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    64</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion.html#structdet">
+GUIDialogInformacion</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogInformacion_glade.html#structdet">
+GUIDialogInformacion_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    64</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla.html#structdet">
+GUIDialogNuevaMalla</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogNuevaMalla_glade.html#structdet">
+GUIDialogNuevaMalla_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    12</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    12</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>   144</STRONG></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   144</EM></TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar.html#structdet">
+GUIDialogRefinar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIDialogRefinar_glade.html#structdet">
+GUIDialogRefinar_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    10</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   100</EM></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>   100</TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal.html#structdet">
+GUIVentanaPrincipal</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GUIVentanaPrincipal_glade.html#structdet">
+GUIVentanaPrincipal_glade</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    19</STRONG></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    19</EM></TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>   361</STRONG></TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   361</EM></TD></TR>
+<TR>
+<TD><A HREF="GdkEventButton.html#structdet">
+GdkEventButton</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GdkEventConfigure.html#structdet">
+GdkEventConfigure</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GdkEventExpose.html#structdet">
+GdkEventExpose</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GdkEventMotion.html#structdet">
+GdkEventMotion</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraCilindro.html#structdet">
+GeneraCilindro</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromArchivosXYZU.html#structdet">
+GeneraFromArchivosXYZU</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromComsol_1.html#structdet">
+GeneraFromComsol_1</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMatLab.html#structdet">
+GeneraFromMatLab</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromMedula.html#structdet">
+GeneraFromMedula</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GeneraFromOFF.html#structdet">
+GeneraFromOFF</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Generar.html#structdet">
+Generar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="GlademmData.html#structdet">
+GlademmData</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    64</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    64</TD></TR>
+<TR>
+<TD><A HREF="Guardar.html#structdet">
+Guardar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="HBox.html#structdet">
+HBox</A>
+</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Image.html#structdet">
+Image</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="ImageMenuItem.html#structdet">
+ImageMenuItem</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="InformacionMalla.html#structdet">
+InformacionMalla</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="Informar.html#structdet">
+Informar</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     9</TD></TR>
+<TR>
+<TD><A HREF="Label.html#structdet">
+Label</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     8</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMaximo.html#structdet">
+LargoArcoMaximo</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="LargoArcoMinimo.html#structdet">
+LargoArcoMinimo</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Lepp.html#structdet">
+Lepp</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="LeppDelaunay.html#structdet">
+LeppDelaunay</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Malla.html#structdet">
+Malla</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    32</STRONG></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    33</STRONG></TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     7</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG> 36864</STRONG></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG> 53361</STRONG></TD></TR>
+<TR>
+<TD><A HREF="MejDelaunay.html#structdet">
+MejDelaunay</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Mejorar.html#structdet">
+Mejorar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Menu.html#structdet">
+Menu</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="MenuBar.html#structdet">
+MenuBar</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="MenuItem.html#structdet">
+MenuItem</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="NoVerificacion.html#structdet">
+NoVerificacion</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Nodo.html#structdet">
+Nodo</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>    16</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    16</TD></TR>
+<TR>
+<TD><A HREF="Nodos.html#structdet">
+Nodos</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>    36</TD></TR>
+<TR>
+<TD><A HREF="Polinomio.html#structdet">
+Polinomio</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Punto.html#structdet">
+Punto</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="RadioButton.html#structdet">
+RadioButton</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="RefPtr.html#structdet">
+RefPtr</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Refinar.html#structdet">
+Refinar</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="ScrolledWindow.html#structdet">
+ScrolledWindow</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="SegTriInt.html#structdet">
+SegTriInt</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="SegmentTriangleIntersection.html#structdet">
+SegmentTriangleIntersection</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     4</TD></TR>
+<TR>
+<TD><A HREF="SeparatorToolItem.html#structdet">
+SeparatorToolItem</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="SimpleGLScene.html#structdet">
+SimpleGLScene</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     9</EM></TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    81</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>   324</EM></TD></TR>
+<TR>
+<TD><A HREF="SpinButton.html#structdet">
+SpinButton</A>
+</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Statusbar.html#structdet">
+Statusbar</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Table.html#structdet">
+Table</A>
+</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     5</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="TextView.html#structdet">
+TextView</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="ToolButton.html#structdet">
+ToolButton</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Toolbar.html#structdet">
+Toolbar</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="VBox.html#structdet">
+VBox</A>
+</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     6</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Vect.html#structdet">
+Vect</A>
+</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    36</EM></TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>    36</TD></TR>
+<TR>
+<TD><A HREF="VerificacionLocal.html#structdet">
+VerificacionLocal</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="VerificacionNodosVecinos.html#structdet">
+VerificacionNodosVecinos</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Widget.html#structdet">
+Widget</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="Window.html#structdet">
+Window</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="anonymous.html#structdet">
+anonymous</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="bool.html#structdet">
+bool</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="connection.html#structdet">
+connection</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="gsl_histogram.html#structdet">
+gsl_histogram</A>
+</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="list.html#structdet">
+list</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="ostream.html#structdet">
+ostream</A>
+</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="string.html#structdet">
+string</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    12</EM></TD><TD ALIGN=RIGHT BGCOLOR="RED"><STRONG>    13</STRONG></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    13</EM></TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="tPointd.html#structdet">
+tPointd</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="tPointi.html#structdet">
+tPointi</A>
+</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR>
+<TD><A HREF="vector.html#structdet">
+vector</A>
+</TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>     8</EM></TD><TD ALIGN=RIGHT BGCOLOR="YELLOW"><EM>    10</EM></TD><TD ALIGN=RIGHT>    10</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+</TABLE>
+<H1><A NAME="other">Other Extents</A></H1>
+<TABLE BORDER WIDTH=100%>
+<TR>
+<TH BGCOLOR="AQUA" WIDTH=25%>Location</TH><TH BGCOLOR="AQUA" WIDTH=45%>Text</TH><TH BGCOLOR="AQUA" WIDTH=10%>LOC</TH><TH BGCOLOR="AQUA" WIDTH=10%>COM</TH><TH BGCOLOR="AQUA" WIDTH=10%>MVG</TH></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#algalmacenamiento.h:         1">algalmacenamiento.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#algdesplazamiento.h:         1">algdesplazamiento.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#algdesrefinamiento.h:         1">algdesrefinamiento.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#alggeneracion.h:         1">alggeneracion.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#algmejoramiento.h:         1">algmejoramiento.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#algrefinamiento.h:         1">algrefinamiento.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatocomsol_1.cpp:         1">almacenatocomsol_1.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatocomsol_1.h:         1">almacenatocomsol_1.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatomlldebug.cpp:         1">almacenatomlldebug.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatomlldebug.h:         1">almacenatomlldebug.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatooff.cpp:         1">almacenatooff.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatooff.h:         1">almacenatooff.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatoxyzu.cpp:         1">almacenatoxyzu.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#almacenatoxyzu.h:         1">almacenatoxyzu.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#angulominimo.cpp:         1">angulominimo.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#angulominimo.h:         1">angulominimo.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#arco.cpp:         1">arco.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#arco.h:         1">arco.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#arcos.cpp:         1">arcos.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#arcos.h:         1">arcos.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#areacara.cpp:         1">areacara.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#areacara.h:         1">areacara.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#cara.cpp:         1">cara.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#cara.h:         1">cara.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#caras.cpp:         1">caras.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#caras.h:         1">caras.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#comando.cpp:         1">comando.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#comando.h:         1">comando.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#config.h:         1">config.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#criterio.h:         1">criterio.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#definiciones.h:         1">definiciones.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#deformar.cpp:         1">deformar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#deformar.h:         1">deformar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#delaunaylongestedgebisection.cpp:         1">delaunaylongestedgebisection.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#delaunaylongestedgebisection.h:         1">delaunaylongestedgebisection.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#desrefinamientoedgecollapse.cpp:         1">desrefinamientoedgecollapse.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#desrefinamientoedgecollapse.h:         1">desrefinamientoedgecollapse.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#desrefinar.cpp:         1">desrefinar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#desrefinar.h:         1">desrefinar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#distribuirhormona.cpp:         1">distribuirhormona.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#distribuirhormona.h:         1">distribuirhormona.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generacilindro.cpp:         1">generacilindro.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generacilindro.h:         1">generacilindro.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromarchivosxyzu.cpp:         1">generafromarchivosxyzu.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromarchivosxyzu.h:         1">generafromarchivosxyzu.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromcomsol_1.cpp:         1">generafromcomsol_1.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromcomsol_1.h:         1">generafromcomsol_1.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     4</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafrommatlab.cpp:         1">generafrommatlab.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafrommatlab.h:         1">generafrommatlab.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafrommedula.cpp:         1">generafrommedula.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafrommedula.h:         1">generafrommedula.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromoff.cpp:         1">generafromoff.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generafromoff.h:         1">generafromoff.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generar.cpp:         1">generar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#generar.h:         1">generar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#guardar.cpp:         1">guardar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#guardar.h:         1">guardar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogAbrirMatlab.cc:         1">GUIDialogAbrirMatlab.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogAbrirMatlab_glade.cc:         1">GUIDialogAbrirMatlab_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogAbrirMatlab_glade.hh:         1">GUIDialogAbrirMatlab_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogAbrirMatlab.hh:         1">GUIDialogAbrirMatlab.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogCambios.cc:         1">GUIDialogCambios.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogCambios_glade.cc:         1">GUIDialogCambios_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogCambios_glade.hh:         1">GUIDialogCambios_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogCambios.hh:         1">GUIDialogCambios.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDesrefinar.cc:         1">GUIDialogDesrefinar.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDesrefinar_glade.cc:         1">GUIDialogDesrefinar_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDesrefinar_glade.hh:         1">GUIDialogDesrefinar_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDesrefinar.hh:         1">GUIDialogDesrefinar.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDistribuirHormona.cc:         1">GUIDialogDistribuirHormona.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDistribuirHormona_glade.cc:         1">GUIDialogDistribuirHormona_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDistribuirHormona_glade.hh:         1">GUIDialogDistribuirHormona_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogDistribuirHormona.hh:         1">GUIDialogDistribuirHormona.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogInformacion.cc:         1">GUIDialogInformacion.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogInformacion_glade.cc:         1">GUIDialogInformacion_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogInformacion_glade.hh:         1">GUIDialogInformacion_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogInformacion.hh:         1">GUIDialogInformacion.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogNuevaMalla.cc:         1">GUIDialogNuevaMalla.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogNuevaMalla_glade.cc:         1">GUIDialogNuevaMalla_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogNuevaMalla_glade.hh:         1">GUIDialogNuevaMalla_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogNuevaMalla.hh:         1">GUIDialogNuevaMalla.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     9</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogRefinar.cc:         1">GUIDialogRefinar.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogRefinar_glade.cc:         1">GUIDialogRefinar_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogRefinar_glade.hh:         1">GUIDialogRefinar_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIDialogRefinar.hh:         1">GUIDialogRefinar.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIVentanaPrincipal.cc:         1">GUIVentanaPrincipal.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIVentanaPrincipal_glade.cc:         1">GUIVentanaPrincipal_glade.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIVentanaPrincipal_glade.hh:         1">GUIVentanaPrincipal_glade.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#GUIVentanaPrincipal.hh:         1">GUIVentanaPrincipal.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     3</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#informacionmalla.cpp:         1">informacionmalla.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#informacionmalla.h:         1">informacionmalla.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#informar.cpp:         1">informar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#informar.h:         1">informar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#largoarcomaximo.cpp:         1">largoarcomaximo.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#largoarcomaximo.h:         1">largoarcomaximo.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#largoarcominimo.cpp:         1">largoarcominimo.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#largoarcominimo.h:         1">largoarcominimo.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#lepp.cpp:         1">lepp.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#leppdelaunay.cpp:         1">leppdelaunay.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#leppdelaunay.h:         1">leppdelaunay.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#lepp.h:         1">lepp.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#malla.cpp:         1">malla.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#malla.h:         1">malla.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#mejdelaunay.cpp:         1">mejdelaunay.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#mejdelaunay.h:         1">mejdelaunay.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#mejorar.cpp:         1">mejorar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#mejorar.h:         1">mejorar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#nodo.cpp:         1">nodo.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#nodo.h:         1">nodo.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#nodos.cpp:         1">nodos.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#nodos.h:         1">nodos.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#noverificacion.cpp:         1">noverificacion.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#noverificacion.h:         1">noverificacion.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#polinomio.cpp:         1">polinomio.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#polinomio.h:         1">polinomio.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#punto.cpp:         1">punto.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#punto.h:         1">punto.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#refinar.cpp:         1">refinar.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#refinar.h:         1">refinar.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#segmenttriangleintersection.cpp:         1">segmenttriangleintersection.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#segtriint.cpp:         1">segtriint.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#segtriint.h:         1">segtriint.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#SimpleGLScene.cc:         1">SimpleGLScene.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#SimpleGLScene.hh:         1">SimpleGLScene.hh:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#treegrowthsimulator.cc:         1">treegrowthsimulator.cc:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#vect.cpp:         1">vect.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#vect.h:         1">vect.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     2</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#verificacionlocal.cpp:         1">verificacionlocal.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#verificacionlocal.h:         1">verificacionlocal.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#verificacionnodosvecinos.cpp:         1">verificacionnodosvecinos.cpp:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+<TR><TD><CODE><A HREF="cccc_src.html#verificacionnodosvecinos.h:         1">verificacionnodosvecinos.h:1</A></CODE><BR>
+</TD>
+<TD>&lt;file scope items&gt;</TD><TD ALIGN=RIGHT>     1</TD><TD ALIGN=RIGHT>     0</TD><TD ALIGN=RIGHT>     0</TD></TR>
+</TABLE>
+<H1><A NAME="infocccc">About CCCC</A></H1>
+<P>This report was generated by the program CCCC, which is FREELY REDISTRIBUTABLE but carries NO WARRANTY.
+<P>CCCC was developed by Tim Littlefair. 
+as part of a PhD research project. This project is now completed and descriptions of the findings can be accessed at <A HREF=http://www.chs.ecu.edu.au/~tlittlef>http://www.chs.ecu.edu.au/~tlittlef</A>. <P>User support for CCCC can be obtained by <A HREF=mailto:cccc-users@lists.sourceforge.net>mailing the list cccc-users@lists.sourceforge.net</A>.<P>Please also visit the CCCC development website at <A HREF=http://cccc.sourceforge.net>http://cccc.sourceforge.net</A>.
+</BODY></HTML>

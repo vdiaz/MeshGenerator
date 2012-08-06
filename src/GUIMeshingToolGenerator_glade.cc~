@@ -1,0 +1,59 @@
+#include <gtkmm.h>
+#include <iostream>
+// #include "GUIMeshingToolGenerator_glade.hh"
+
+Gtk::Window* mainWindow = 0;
+Gtk::Window* mainWindow = 0;
+Gtk::Button* generateButton = 0;
+Gtk::CheckButton* check_xyzu = 0;
+Gtk::CheckButton* check_matlab = 0;
+Gtk::CheckButton* check_off = 0;
+Gtk::CheckButton* check_comsol = 0;
+
+void on_button_clicked()
+{
+	if (!activeCheckbox())
+		
+}
+
+void on_window_destroyed()
+{
+	Gtk::Main::quit();
+}
+
+bool activeCheckbox() {
+
+	return check_xyzu->get_active() || check_matlab->get_active() || check_off->get_active() || check_comsol->get_active();
+
+}
+
+int main (int argc, char **argv)
+{
+	Gtk::Main kit(argc, argv);
+
+	Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("GUIMeshingToolGenerator.glade");
+
+	builder->get_widget("mainWindow", mainWindow);
+
+	if(mainWindow)
+	{
+        	builder->get_widget("generateButton", generateButton);
+		generateButton->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+        
+        	builder->get_widget("check_xyzu", check_xyzu);
+//		check_xyzu->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+	
+		builder->get_widget("check_matlab", check_matlab);
+//		check_matlab->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+	
+		builder->get_widget("check_off", check_off);
+//		check_off->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+	
+		builder->get_widget("check_comsol", check_comsol);
+//		check_comsol->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+
+	        kit.run(*mainWindow);
+    	}
+
+	return 0;
+}

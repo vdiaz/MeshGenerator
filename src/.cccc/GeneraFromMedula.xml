@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module GeneraFromMedula-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="153" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="25" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="16" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="9.562" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.562" level="0" />
+<weighted_methods_per_class_unity value="5" level="0" />
+<weighted_methods_per_class_visibility value="3" level="0" />
+<depth_of_inheritance_tree value="1" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="6" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="generafrommedula.h" line="10" />
+<lines_of_code value="13" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>GeneraFromMedula(string,double,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="generafrommedula.cpp" line="7" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="generafrommedula.h" line="13" />
+</extent>
+<lines_of_code value="19" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>aplicar()</name>
+<extent>
+<description>definition</description>
+<source_reference file="generafrommedula.cpp" line="50" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="generafrommedula.h" line="14" />
+</extent>
+<lines_of_code value="64" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="5" level="0" />
+<lines_of_code_per_line_of_comment value="12.800" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="1.800" level="0" />
+</member_function>
+<member_function>
+<name>sectorMedula(double)</name>
+<extent>
+<description>definition</description>
+<source_reference file="generafrommedula.cpp" line="30" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="generafrommedula.h" line="27" />
+</extent>
+<lines_of_code value="17" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>updateVecinos()</name>
+<extent>
+<description>definition</description>
+<source_reference file="generafrommedula.cpp" line="129" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="generafrommedula.h" line="25" />
+</extent>
+<lines_of_code value="37" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="9.250" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="2.250" level="0" />
+</member_function>
+<member_function>
+<name>~GeneraFromMedula()</name>
+<extent>
+<description>definition</description>
+<source_reference file="generafrommedula.cpp" line="177" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="generafrommedula.h" line="15" />
+</extent>
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>GeneraFromMedula</name>
+<client_module>
+</client_module>
+<supplier_module>
+<name>AlgGeneracion</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="generafrommedula.h" line="10" />
+</extent>
+<name>Arcos</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="generafrommedula.h" line="19" />
+</extent>
+<name>Caras</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="generafrommedula.h" line="20" />
+</extent>
+<name>Nodos</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="generafrommedula.h" line="18" />
+</extent>
+<name>string</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>pass by value</description>
+<source_reference file="generafrommedula.cpp" line="7" />
+</extent>
+<extent>
+<description>pass by value</description>
+<source_reference file="generafrommedula.h" line="13" />
+</extent>
+<name>vector</name>
+<visible>false</visible>
+<concrete>true</concrete>
+<extent>
+<description>has by value</description>
+<source_reference file="generafrommedula.h" line="21" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

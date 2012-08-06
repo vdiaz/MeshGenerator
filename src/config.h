@@ -1,0 +1,8 @@
+#ifndef CONFIG_H_INCLUDED
+#define CONFIG_H_INCLUDED
+
+#define CARGAR_OFF
+#define GUARDAR_OFF
+#define MEJORAR
+
+#endif // CONFIG_H_INCLUDED

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module Criterio-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="5" level="0" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="0" />
+<lines_of_code value="3" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+<weighted_methods_per_class_unity value="2" level="0" />
+<weighted_methods_per_class_visibility value="2" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="4" level="0" />
+<coupling_between_objects value="12" level="0" />
+<IF4 value="121" level="1" />
+<IF4_per_member_function value="********" level="2" />
+<IF4_visible value="81" level="1" />
+<IF4_visible_per_member_function value="********" level="2" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+<description>definition</description>
+<source_reference file="criterio.h" line="9" />
+<lines_of_code value="3" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>seCumple(Malla *,int)</name>
+<extent>
+<description>declaration</description>
+<source_reference file="criterio.h" line="11" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>~Criterio()</name>
+<extent>
+<description>definition</description>
+<source_reference file="criterio.h" line="12" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>Criterio</name>
+<client_module>
+<name>AlgDesrefinamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algdesrefinamiento.h" line="13" />
+</extent>
+<name>AlgRefinamiento</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="algrefinamiento.h" line="13" />
+</extent>
+<name>AnguloMinimo</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="angulominimo.h" line="9" />
+</extent>
+<name>AreaCara</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="areacara.h" line="9" />
+</extent>
+<name>DelaunayLongestEdgeBisection</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.cpp" line="14" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.h" line="12" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="delaunaylongestedgebisection.h" line="14" />
+</extent>
+<name>DesrefinamientoEdgeCollapse</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.cpp" line="3" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="desrefinamientoedgecollapse.h" line="17" />
+</extent>
+<name>Desrefinar</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="desrefinar.h" line="13" />
+</extent>
+<name>LargoArcoMaximo</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="largoarcomaximo.h" line="10" />
+</extent>
+<name>LargoArcoMinimo</name>
+<visible>true</visible>
+<concrete>true</concrete>
+<extent>
+<description>inheritance</description>
+<source_reference file="largoarcominimo.h" line="10" />
+</extent>
+<name>LeppDelaunay</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.cpp" line="4" />
+</extent>
+<extent>
+<description>pass by reference</description>
+<source_reference file="leppdelaunay.h" line="12" />
+</extent>
+<name>Refinar</name>
+<visible>false</visible>
+<concrete>false</concrete>
+<extent>
+<description>has by reference</description>
+<source_reference file="refinar.h" line="13" />
+</extent>
+</client_module>
+<supplier_module>
+<name>Malla</name>
+<visible>true</visible>
+<concrete>false</concrete>
+<extent>
+<description>pass by reference</description>
+<source_reference file="criterio.h" line="11" />
+</extent>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>

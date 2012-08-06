@@ -1,0 +1,326 @@
+/**
+@author Nicolas Silva Herrera
+ */
+
+#include "config.h"
+#include "GUIVentanaPrincipal.hh"
+#include "GUIDialogAbrirMatlab.hh"
+#include "GUIDialogNuevaMalla.hh"
+#include "GUIDialogInformacion.hh"
+#include "GUIDialogDistribuirHormona.hh"
+
+#include "comando.h"
+#include "generar.h"
+#include "informar.h"
+#include "distribuirhormona.h"
+
+#include <gtkmm.h>
+#include <string>
+#include <list>
+#include <sstream>
+#include <fstream>
+
+GUIVentanaPrincipal::GUIVentanaPrincipal(){
+	this->malla=NULL;
+
+	this->velocidadAnimacion=1000;
+
+	//simpleglscene = Gtk::manage(new class SimpleGLScene());
+	simpleglscene=new SimpleGLScene();
+	simpleglscene->setMuestraCaras(this->mostrar_caras1->get_active());
+	simpleglscene->setMuestraArcos(this->mostrar_arcos1->get_active());
+	//simpleglscene->set_size_request(800, 400);
+	vboxDrawingArea->add(*simpleglscene);
+	simpleglscene->show();
+	}
+
+/*
+void GUIVentanaPrincipal::on_nuevo1_activate(){
+	//Comando* comando=new Generar(20,"/home/chupacabrasx/Desktop/medulafinal.txt",20,100,20);
+	GUIDialogNuevaMalla dialog;
+	dialog.set_transient_for(*this);
+	int result=dialog.run();
+	if (result==Gtk::RESPONSE_OK){
+		Comando *comando=NULL;
+		if (dialog.getTipoFigura()=="Cilindro"){
+			int tipo=10;
+			int altura=dialog.getAltura();
+			int radio=dialog.getRadio();
+			int num_anillos=dialog.getNumeroDeAnillos();
+			int num_puntos=dialog.getPuntosPorAnillo();
+			int tipoMalla;
+			if (dialog.getTipoMalla()=="Triangulos")
+				tipoMalla=0;
+			else if (dialog.getTipoMalla()=="Cuadrilateros")
+				tipoMalla=1;
+			else
+				return;
+			comando=new Generar(tipo, altura, radio, num_anillos, num_puntos, tipoMalla);
+			}
+        else if (dialog.getTipoFigura()=="A partir de Medula"){
+			int tipo=20;
+			string archivo=dialog.getMedulaArchivo();
+			ifstream in(archivo.c_str());
+			if (!in.good()) return;
+			in.close();
+			int radio=dialog.getRadio();
+			int num_anillos=dialog.getNumeroDeAnillos();
+			int num_puntos=dialog.getPuntosPorAnillo();
+			comando=new Generar(tipo,archivo,radio,num_anillos,num_puntos);
+			}
+		else
+			return;
+
+		comando->execute();
+		delete this->malla;
+		this->malla=comando->getMalla();
+		delete comando;
+
+		simpleglscene->clear();
+		simpleglscene->updateMalla(malla);
+
+		this->escribirEnLog("Malla generada correctamente.");
+		}
+	else
+		return;
+	}
+*/
+
+void GUIVentanaPrincipal::on_abrir1_activate(){
+	Gtk::FileChooserDialog dialog("Abrir malla", Gtk::FILE_CHOOSER_ACTION_OPEN);
+  	dialog.set_transient_for(*this);
+	dialog.set_select_multiple(true);
+
+  	//Add response buttons the the dialog:
+  	dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
+  	dialog.add_button(Gtk::Stock::OPEN, Gtk::RESPONSE_OK);
+
+  	//Add filters, so that only certain file types can be selected:
+  	Gtk::FileFilter filter_geomview;
+  	filter_geomview.set_name("off (Geomview)");
+  	filter_geomview.add_pattern("*.off");
+  	dialog.add_filter(filter_geomview);
+
+  	Gtk::FileFilter filter_matlab;
+  	filter_matlab.set_name("txt (Matlab)");
+  	filter_matlab.add_pattern("*.txt");
+  	dialog.add_filter(filter_matlab);
+
+  	Gtk::FileFilter filter_nxnynzu;
+  	filter_nxnynzu.set_name("txt (nx,ny,nz,u)");
+  	filter_nxnynzu.add_pattern("*.txt");
+  	dialog.add_filter(filter_nxnynzu);
+
+	Gtk::FileFilter filter_comsol_1;
+  	filter_comsol_1.set_name("cms_1 (comsol_1)");
+  	filter_comsol_1.add_pattern("*.cms_1");
+  	dialog.add_filter(filter_comsol_1);
+
+  	//Show the dialog and wait for a user response:
+  	int result = dialog.run();
+
+	if (result==Gtk::RESPONSE_OK){
+		Gtk::FileFilter* filtro=dialog.get_filter();
+		Comando *comando = NULL;
+		if (filtro->get_name()=="off (Geomview)"){
+			int tipofiltro=0;
+			list<string> filenames=dialog.get_filenames();
+			comando = new Generar(tipofiltro, filenames);
+			}
+		else if (filtro->get_name()=="txt (Matlab)"){
+			int tipofiltro=1;
+			list<string> filenames=dialog.get_filenames();
+			GUIDialogAbrirMatlab dialogMatlab;
+			dialogMatlab.set_transient_for(dialog);
+			int resultDialogMatlab=dialogMatlab.run();
+			if (resultDialogMatlab==Gtk::RESPONSE_OK){
+				int numeroDeAnillos=dialogMatlab.getNumeroDeAnillos();
+				int puntosPorAnillo=dialogMatlab.getPuntosPorAnillo();
+				string strTipoMalla=dialogMatlab.getTipoMalla();
+				int tipoMalla;
+				if (strTipoMalla=="Triangulos")
+					tipoMalla=0;
+				else if (strTipoMalla=="Cuadrilateros")
+					tipoMalla=1;
+				else
+					return;
+				comando=new Generar(tipofiltro,filenames,numeroDeAnillos,puntosPorAnillo,tipoMalla);
+				}
+			else
+				return;
+			}
+		else if (filtro->get_name()=="txt (nx,ny,nz,u)"){
+			int tipofiltro=2;
+			list<string> filenames=dialog.get_filenames();
+			if (filenames.size()!=4){
+				this->escribirEnLog("Se deben seleccionar 4 archivos para el formato nxnynzu.");
+				return;
+				}
+			comando = new Generar(tipofiltro, filenames);
+			}
+		else if (filtro->get_name()=="cms_1 (comsol_1)"){
+			int tipofiltro=3;
+			list<string> filenames=dialog.get_filenames();
+			comando = new Generar(tipofiltro, filenames);
+			}
+		else
+			return;
+
+		comando->execute();
+		delete this->malla;
+		this->malla=comando->getMalla();
+		delete comando;
+
+		simpleglscene->clear();
+		simpleglscene->updateMalla(malla);
+
+		this->escribirEnLog("Malla cargada correctamente.");
+		}
+
+	else
+		return;
+	}
+
+void GUIVentanaPrincipal::on_salir1_activate(){
+	this->hide();
+	}
+
+void GUIVentanaPrincipal::on_cortar1_activate()
+{
+}
+
+void GUIVentanaPrincipal::on_copiar1_activate()
+{
+}
+
+void GUIVentanaPrincipal::on_pegar1_activate()
+{
+}
+
+void GUIVentanaPrincipal::on_borrar1_activate(){
+	simpleglscene->clear();
+	delete malla;
+	malla=NULL;
+	this->escribirEnLog("Malla borrada.");
+	}
+
+void GUIVentanaPrincipal::on_distribuir_hormona1_activate(){
+    if(this->malla == NULL) {
+		this->escribirEnLog("La malla aun no esta seteada.");
+        return;
+    	}
+
+    GUIDialogDistribuirHormona dialog;
+    Comando *comando=NULL;
+	int result=dialog.run();
+	if (result==Gtk::RESPONSE_OK){
+	    double gravitacional=dialog.getGravitacional();
+	    double longitudinal=dialog.getLongitudinal();
+	    double tangencial=dialog.getTangencial();
+        comando=new DistribuirHormona(malla,simpleglscene,gravitacional,longitudinal,tangencial);
+        }
+    else
+        return;
+
+
+    comando->execute();
+    simpleglscene->updateMalla(malla,false);
+    delete comando;
+    this->escribirEnLog("Hormonas distribuidas.");
+
+    }
+
+void GUIVentanaPrincipal::on_informacion1_activate(){
+	if(this->malla == NULL) {
+        this->escribirEnLog("La malla aun no esta seteada.");
+        return;
+    	}
+
+	Informar* informar=new Informar(malla);
+	informar->execute();
+
+	GUIDialogInformacion dialog(informar);
+	Gtk::Main::run(dialog);
+
+	delete informar;
+
+	}
+
+void GUIVentanaPrincipal::on_mostrar_caras1_activate(){
+	simpleglscene->setMuestraCaras(this->mostrar_caras1->get_active());
+	}
+
+void GUIVentanaPrincipal::on_mostrar_arcos1_activate(){
+	simpleglscene->setMuestraArcos(this->mostrar_arcos1->get_active());
+	}
+
+void GUIVentanaPrincipal::on_mostrar_colores_segun_concentracion1_activate(){
+	simpleglscene->setMuestraConcentracion(this->mostrar_colores_segun_concentracion1->get_active());
+	}
+
+void GUIVentanaPrincipal::on_enlentecer_animacion1_activate(){
+	velocidadAnimacion=velocidadAnimacion+50;
+	simpleglscene->pauseAnimacion();
+	simpleglscene->startAnimacion(velocidadAnimacion);
+	}
+
+void GUIVentanaPrincipal::on_detener_animacion1_activate(){
+	simpleglscene->stopAnimacion();
+	}
+
+void GUIVentanaPrincipal::on_pausar_animacion1_activate(){
+	simpleglscene->pauseAnimacion();
+	}
+
+void GUIVentanaPrincipal::on_iniciar_animacion1_activate(){
+	simpleglscene->startAnimacion(velocidadAnimacion);
+	}
+
+void GUIVentanaPrincipal::on_apurar_animacion1_activate(){
+	velocidadAnimacion=velocidadAnimacion-50;
+	if (velocidadAnimacion<50)
+		velocidadAnimacion=50;
+	simpleglscene->pauseAnimacion();
+	simpleglscene->startAnimacion(velocidadAnimacion);
+	}
+
+void GUIVentanaPrincipal::on_acerca_de1_activate(){
+	Gtk::AboutDialog dialog;
+	dialog.set_transient_for(*this);
+	dialog.set_name("Tree Growth Simulator");
+	dialog.set_version("3.1");
+	list<string> autores;
+	autores.push_back("Nicolás Silva");
+	autores.push_back("Ricardo Medina (Version antigua)");
+	dialog.set_authors(autores);
+	dialog.set_comments("Software modelador del crecimiento de arboles usando mallas geometricas.");
+	dialog.run();
+	}
+
+void GUIVentanaPrincipal::on_toolbuttonNuevo_clicked(){
+	this->on_nuevo1_activate();
+	}
+
+void GUIVentanaPrincipal::on_toolbuttonAbrir_clicked(){
+	this->on_abrir1_activate();
+	}
+
+void GUIVentanaPrincipal::escribirEnLog(string texto){
+	time_t tim=time(NULL);
+	tm *time=localtime(&tim);
+	int hora=time->tm_hour;
+	int minuto=time->tm_min;
+	int segundo=time->tm_sec;
+
+	string logviejo=textviewLog->get_buffer()->get_text();
+
+	stringstream stream;
+	stream << "[" << hora << ":" << minuto << ":" << segundo << "] " << texto << endl << logviejo;
+
+	textviewLog->get_buffer()->set_text(stream.str());
+	}
+
+GUIVentanaPrincipal::~GUIVentanaPrincipal(){
+	delete simpleglscene;
+	delete malla;
+	}

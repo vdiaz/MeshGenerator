@@ -1,0 +1,15 @@
+#include <gtkmm.h>
+#include <iostream>
+
+class GUIMeshingToolGenerator_glade
+{ 
+        Gtk::Window* mainWindow = 0;
+	Gtk::Button* generateButton = 0;
+	Gtk::CheckButton* check_xyzu = 0;
+	Gtk::CheckButton* check_matlab = 0;
+	Gtk::CheckButton* check_off = 0;
+	Gtk::CheckButton* check_cilindro = 0;
+
+	void on_button_clicked();
+	void on_window_destroyed();
+};
